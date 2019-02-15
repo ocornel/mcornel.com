@@ -92,18 +92,19 @@
                                 <span class="name-menu">Services</span>
                             </a>
                         </li>
-                        <li id="work" class="nav-item">
-                            <a href="index.html#work-cont" data-value="work-cont">
-                            <i class="fa fa-images" hidden></i>
-                                <span class="name-menu">Portfolio</span>
-                            </a>
-                        </li>
-                        <li id="testim" class="nav-item">
-                            <a href="index.html#testim-cont" data-value="testim-cont">
-                            <i class="fa fa-heart" hidden></i>
-                                <span class="name-menu">Testimonials</span>
-                            </a>
-                        </li>
+                        <!--todo work on these sections-->
+                        <!--<li id="work" class="nav-item">-->
+                            <!--<a href="index.html#work-cont" data-value="work-cont">-->
+                            <!--<i class="fa fa-images" hidden></i>-->
+                                <!--<span class="name-menu">Portfolio</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li id="testim" class="nav-item">-->
+                            <!--<a href="index.html#testim-cont" data-value="testim-cont">-->
+                            <!--<i class="fa fa-heart" hidden></i>-->
+                                <!--<span class="name-menu">Testimonials</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
                         <li id="contact" class="nav-item">
                             <a href="index.html#contact-cont" data-value="contact-cont">
                             <i class="fa fa-envelope" hidden></i>
@@ -286,14 +287,14 @@
                                     <div class="content">
                                         <img src="images/icons/processing.png" alt="serv1" />
                                         <h4>Website Development</h4>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do tempor .</p>
+                                        <p>Make your online presence stand out and expose your business to unlimited opportunity.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="content">
                                         <img src="images/icons/browser.png" alt="serv1" />
                                         <h4>Systems Development</h4>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do tempor .</p>
+                                        <p>Enjoy the convenience of a system that manages your data and information securely.</p>
                                     </div>
                                 </div>
                             </div>
@@ -302,7 +303,7 @@
                                     <div class="content">
                                         <img src="images/icons/smartphone.png" alt="serv1" />
                                         <h4>Android App Design</h4>
-                                        <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do tempor .</p>
+                                        <p>Get an an app that's intuitive and convenient to use at your clients fingertips.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -675,7 +676,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="form">
-                        <form id="my_form" method="post" onsubmit="submitForm(); return false;">
+                        <form id="my_form" method="post" onsubmit="submitForm()">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-group">
@@ -704,6 +705,7 @@
                                 </div>
                                 <p>
                                     <span class="send-btn">
+                                        <!--<button id="btn" class="btn" onclick="submitForm()" value="Send Message"><i class="fas fa-long-arrow-alt-right"></i></button>-->
                                         <input id="btn" class="btn" type="submit" value="Send Message" /><i class="fas fa-long-arrow-alt-right"></i>
                                     </span>
                                     <span id="status"></span>
@@ -767,8 +769,15 @@
         </div>
         
         <!-- End Loading -->
-        
-        
+
+        <script>
+            function submitForm() {
+                setTimeout(function() {
+                    var message = document.getElementById('msg').value + document.getElementById('name').value;
+                    window.open("mailto:" + document.getElementById('email').value + "?subject=" + document.getElementById('subject').value + "&body=" + message);
+                }, 320);
+            }
+        </script>
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/typed.js"></script>
