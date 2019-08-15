@@ -726,7 +726,7 @@ div > a > img {
     z-index: 1;
     height: 80px; }
     .navbar .logo .bg_logo {
-      background-image: url(../images/dark-logo.png);
+      background-image: url(../images/mcornel-logo.svg);
       /* Here The Light Logo */
       background-size: 50px;
       background-repeat: no-repeat;
@@ -738,7 +738,7 @@ div > a > img {
       top: 25px;
       left: 0; }
     .navbar .logo .bg_logo_dark {
-      background-image: url(../images/dark-logo.png);
+      background-image: url(../images/mcornel-logo.svg);
       /* Here The Dark Logo */
       background-repeat: no-repeat; }
     .navbar .logo .bg_logo_light {
