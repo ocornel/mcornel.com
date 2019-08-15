@@ -737,6 +737,18 @@ div > a > img {
       position: absolute;
       top: 25px;
       left: 0; }
+    .navbar .logo .bg_custon_logo {
+      background-image: url(../images/mcornel-logo.svg);
+      /* Here The Light Logo */
+      background-size: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 50px;
+      display: inline-block;
+      width: 100%;
+      position: absolute;
+      top: 25px;
+      left: 0; }
     .navbar .logo .bg_logo_dark {
       background-image: url(../images/mcornel-logo.svg);
       /* Here The Dark Logo */
@@ -1213,7 +1225,7 @@ section.close-menu {
 
 ===========================================================*/
 .serv .title h1:before {
-  content: 'services'; }
+  content: 'What I do'; }
 .serv .content {
   margin-bottom: 40px;
   padding-left: 10px; }
@@ -1260,7 +1272,7 @@ section.close-menu {
 
 ===========================================================*/
 .work .title h1:before {
-  content: 'portfolio'; }
+  content: 'What I\'ve done'; }
 .work .shuffle {
   margin-bottom: 40px; }
   .work .shuffle ul {
@@ -1462,7 +1474,7 @@ section.close-menu {
 .contact {
   overflow: hidden; }
   .contact .title h1:before {
-    content: 'contact'; }
+    content: 'Reach me'; }
   .contact .form {
     padding: 0 30px; }
     .contact .form .form-group textarea,
