@@ -77,6 +77,11 @@
                 border: solid 1px #55aea1;
                 color: white;
             }
+            .contact .infos .social a {
+                font-size: 22px;
+                color: white;
+                margin-left: 22px;
+            }
         </style>
     </head>
     <body>
@@ -745,8 +750,9 @@
                                 </div>
                                 <p>
                                     <span class="send-btn">
-                                        <!--<button id="btn" class="btn" onclick="submitForm()" value="Send Message"><i class="fas fa-long-arrow-alt-right"></i></button>-->
-                                        <input id="btn" class="btn" type="submit" value="Send Message" /><i class="fas fa-long-arrow-alt-right"></i>
+                                        <a href="" id="send_message_link" target="_blank" hidden></a>
+<!--                                        <button id="btn" class="btn" onclick="submitForm()" value="Send Message"><i class="fas fa-long-arrow-alt-right"></i></button>-->
+                                        <input id="btn" class="btn"  onclick="submitForm()" value="Send Message" /><i class="fas fa-long-arrow-alt-right"></i>
                                     </span>
                                     <span id="status"></span>
                                 </p>
@@ -769,6 +775,16 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>JUJA - Thika Road, Nairobi KENYA</span>
                         </div>
+                        <div class="social">
+                            <div class="social-media">
+                                <a href="https://gitlab.com/mcornel" target="_blank" title="GitLab profile"><i class="fab fa-gitlab"></i></a> <!-- You Can Edit the link here -->
+                                <a href="https://github.com/ocornel" target="_blank" title="GitHub profile"><i class="fab fa-github"></i></a> <!-- You Can Edit the link here -->
+                                <a href="https://www.linkedin.com/in/martincornel" target="_blank" title="Linkedin Profile"><i class="fab fa-linkedin"></i></a> <!-- You Can Edit the link here -->
+                                <a href="https://twitter.com/O_Cornel" target="_blank" title="Twitter Handle"><i class="fab fa-twitter"></i></a> <!-- You Can Edit the link here -->
+                                <a href="https://facebook.com/oumartinc" target="_blank" title="Facebook Wall"><i class="fab fa-facebook-f"></i></a> <!-- You Can Edit the link here -->
+                                <!--<a href="index.html#"><i class="fab fa-instagram"></i></a> &lt;!&ndash; You Can Edit the link here &ndash;&gt;-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -786,8 +802,7 @@
             <!-- Start Footer -->
 
             <footer>
-                <p>© Copyright <script>document.write((new Date()).getFullYear().toString());</script>. </p>
-                <p>No Right Reserved &#9786;</p>
+                <p>© Copyright <script>document.write((new Date()).getFullYear().toString());</script> | No Right Reserved &#9786;</p>
             </footer>
 
             <!-- End Footer -->
@@ -812,10 +827,13 @@
 
         <script>
             function submitForm() {
-                setTimeout(function() {
-                    var message = document.getElementById('msg').value + document.getElementById('name').value;
-                    window.open("mailto:mrtncornel@gmail.com"+ "?subject=" + document.getElementById('subject').value + "&body=" + message);
-                }, 320);
+                var subject = document.getElementById('subject').value;
+                var email = document.getElementById('email').value;
+                var message = "Email from: "+ document.getElementById('name').value + " " + document.getElementById('msg').value + " Reply to: " + email;
+                var mail_link = document.getElementById('send_message_link');
+                mail_link.setAttribute('href', "mailto:mrtncornel@gmail.com"+ "?subject=" + subject + "&body=" + message + "&cc=" + email);
+                mail_link.innerHTML = message;
+                mail_link.click();
             }
         </script>
         <script src="js/jquery-3.1.1.min.js"></script>
