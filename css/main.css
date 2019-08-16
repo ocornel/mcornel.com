@@ -1334,10 +1334,10 @@ section.close-menu {
         font-size: 17px;
         letter-spacing: 0.8px; }
     .work .gallery .item .over a {
-      position: absolute;
-      bottom: 15px;
-      right: 15px;
-      font-size: 21px;
+      /*position: absolute;*/
+      /*bottom: 15px;*/
+      /*right: 15px;*/
+      /*font-size: 21px;*/
       color: #fff; }
   .work .gallery .item img {
     -webkit-transition: all 600ms ease-in-out;

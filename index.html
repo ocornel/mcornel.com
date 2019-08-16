@@ -38,11 +38,46 @@
             <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
             <script src="js/respond.min.js"></script>
         <![endif]-->
+
+        <style>
+
+            .work .gallery .item .over .action-links {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                font-size: 10px;
+                color: #fff;
+            }
+            .work .gallery .item .over .action-links a {
+                font-size: 10px;
+            }
+
+            .work .gallery .item .over .info-img h4 {
+                font-size: 20px;
+                text-decoration: underline solid deepskyblue;
+                margin-bottom: 5px;
+
+            }
+
+
+            .project-summary {
+                font-size: 12px;
+            }
+
+            .skill-list {
+                font-size: 10px;
+            }
+            .clients img {
+                height: 30px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+        </style>
     </head>
     <body>
-        
+
         <!-- Start Section Tool Box -->
-        
+
         <div class="option-box">
             <div class="color-option">
                 <ul class="list-unstyled colors">
@@ -61,12 +96,12 @@
 <!--                <i class="fas fa-cog fa-spin"></i>-->
 <!--            </div>-->
         </div>
-        
+
         <!-- End Section Tool Box -->
-        
+
         <!-- Start Navbar -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-                
+
             <div class="container">
                 <a href="" class="logo">
                     <span class="bg_custom_logo"></span>
@@ -141,9 +176,9 @@
             </div>
         </div>
         <!-- End Navbar -->
-        
+
         <!-- Start Header -->
-        
+
         <section id="home-cont" class="home1 home">
             <div class="zoominheader bg-image">
                 <div class="overlay"></div>
@@ -157,26 +192,26 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- End Header -->
-        
-        
+
+
         <!-- Start About -->
         <section id="about-cont" class="about">
             <div class="title">
                 <h1 class="kaushan">About</h1>
             </div>
             <div class="container">
-                
+
                 <div class="row">
                     <div class="col-md-10 col-lg-6">
-                        <div class="about-img bg-image"></div> 
+                        <div class="about-img bg-image"></div>
                         <!-- go to main.scss file to edit personal image -->
                     </div>
                     <div class="col-md-12 col-lg-6">
                         <div class="tabs-about">
                             <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
-                                
+
                                 <!-- Start About Me Title Tab -->
                                 <li class="nav-item">
                                     <a class="nav-link active" id="about-tab" data-toggle="tab" href="#aboutme" role="tab" aria-controls="about" aria-expanded="true">
@@ -185,9 +220,9 @@
                                     </a>
                                 </li>
                                 <!-- End About Me Title Tab -->
-                                
+
                                 <!-- ================ -->
-                                
+
                                 <!-- Start Profile Title Tab -->
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">
@@ -196,9 +231,9 @@
                                     </a>
                                 </li>
                                 <!-- End Profile Title Tab -->
-                                
+
                                 <!-- ================ -->
-                                
+
                                 <!-- Start Skills Title Tab -->
                                 <li class="nav-item">
                                     <a class="nav-link" id="skill-tab" data-toggle="tab" href="#skill" role="tab" aria-controls="skill">
@@ -209,7 +244,7 @@
                                 <!-- End Skills Title Tab -->
                             </ul>
                             <div class="tab-content" id="myTabContent">
-                                
+
                                 <!-- Start About Me Tab -->
                                 <div class="tab-pane fade show active text-left" id="aboutme" role="tabpanel" aria-labelledby="about-tab">
                                     <p>I am an upcoming professional in Software Engineering, IT consultancy, Web systems and Android applications development.</p>
@@ -220,9 +255,9 @@
                                     <!-- Here image Signature -->
                                 </div>
                                 <!-- End About Me Tab -->
-                                
+
                                 <!-- ================ -->
-                                
+
                                 <!-- Start Profile Tab -->
                                 <div class="tab-pane fade text-left profile" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <h6><span class="title-info">Name :</span><span>Martin Cornel</span></h6> <!-- Edit Your Name  -->
@@ -242,9 +277,9 @@
 <!--                                    </div>-->
                                 </div>
                                 <!-- End Profile Tab -->
-                                
+
                                 <!-- ================ -->
-                                
+
                                 <!-- Start Skills Tab -->
                                 <div class="tab-pane fade skill" id="skill" role="tabpanel" aria-labelledby="skill-tab">
                                     <div class="skills">
@@ -288,10 +323,10 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- End About -->
-        
-        
+
+
         <!-- Start Services -->
         <section id="serv-cont" class="serv">
             <div class="title">
@@ -345,10 +380,10 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- End Services -->
-        
-        
+
+
         <!-- Start Work -->
         <section id="work-cont" class="work">
             <div class="title">
@@ -359,200 +394,160 @@
                     <ul class="list-unstyled">
                         <li data-class="all" class="active item">All</li>
                         <li data-class=".websites" class="item">Websites</li>
-                        <li data-class=".systems" class="item">Web Systems</li>
+                        <li data-class=".systems" class="item">Systems</li>
                         <li data-class=".android" class="item">Android Design</li>
                         <li data-class=".themes" class="item">Themes</li>
                     </ul>
                 </div>
                 <div class="gallery">
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-1"></div>-->
+<!--                        <div class="col-md-10" align="center">-->
+<!--                            <br><br>-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--                            <h5>With the permission of my clients, I will showcase some of my satisfied clients' projects here.</h5>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-10" align="center">
-                            <br><br>
 
-                            <h5>With the permission of my clients, I will showcase some of my satisfied clients' projects here.</h5>
+                        <!-- Start Project 3 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="item systems android websites">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <h4 class="">Saspacity</h4>
+                                        <span class="project-summary">Appointments and e-wallet</span>
+                                        <p class="skill-list">Laravel (PHP), Android (Kotlin), APIs, Integration (MPESA)...</p>
+                                    </div>
+                                    <div class="action-links">
+                                        <a  href="https://saspacity.com/" target="_blank" class="btn btn-primary"><i class="fa fa-link"></i> Visit</a>
+                                        <a  href="https://play.google.com/store/apps/details?id=com.saspacity.android" target="_blank" class="btn btn-primary"><i class="fab fa-google-play"></i> Android</a>
+                                    </div>
+                                </div>
+                                <img src="images/portfolio/saspacity.png" alt="imgPort1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- End Project 3 -->
+
+                        <!-- Start Project 4 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="item systems">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <h4 class="">Resolution Credit</h4>
+                                        <span class="project-summary">Insurance company management</span>
+                                        <p class="skill-list">Laravel (PHP), jQuery, Integrations (MPESA, CRB, SMS), Project management</p>
+                                    </div>
+                                    <div class="action-links">
+                                        <a  href="https://rcredit.co.ke/" target="_blank" class="btn btn-primary"><i class="fa fa-link"></i> Visit</a>
+                                    </div>
+                                </div>
+                                <img src="images/portfolio/rcredit.png" alt="imgPort1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- End Project 4 -->
+
+                        <!-- Start Project 5 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="item systems websites">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <h4 class="">Antara health (R4H)</h4>
+                                        <span class="project-summary">Health care eWallet and tracking</span>
+                                        <p class="skill-list">Laravel (PHP), jQuery, Project management</p>
+                                    </div>
+                                    <div class="action-links">
+                                        <a  href="https://www.antarahealth.com/" target="_blank" class="btn btn-primary"><i class="fa fa-link"></i> Visit</a>
+                                    </div>
+                                </div>
+                                <img src="images/portfolio/r4h.png" alt="imgPort1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- End Project 5 -->
+
+                        <!-- Start Project 6 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="item systems websites">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <h4 class="">eProcure</h4>
+                                        <span class="project-summary">Cloud sourcing solution</span>
+                                        <p class="skill-list">Django (Python), Integration (MPESA, Pesapal), Project management</p>
+                                    </div>
+                                    <div class="action-links">
+                                        <a  href="https://eprocure.co.ke/" target="_blank" class="btn btn-primary"><i class="fa fa-link"></i> Visit</a>
+                                    </div>
+                                </div>
+                                <img src="images/portfolio/eprocure.png" alt="imgPort1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- End Project 6 -->
+                        <!-- Start Project 1 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="item websites">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <h4 class="">Complete Logistics</h4>
+                                        <span class="project-summary">Website for logistics company</span>
+                                        <p class="skill-list">HTML, CSS, Javascript</p>
+                                    </div>
+                                    <div class="action-links">
+                                        <a  href="http://completelogisticslimited.com/" target="_blank" class="btn btn-primary"><i class="fa fa-link"></i> Visit</a>
+                                    </div>
+                                </div>
+                                <img src="images/portfolio/complete_logistics.png" alt="imgPort1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- End Project 1 -->
+
+                        <!-- Start Project 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="item systems android">
+                                <div class="over">
+                                    <div class="info-img">
+                                        <h4 class="">Report Lagend</h4>
+                                        <span class="project-summary">System for work logs</span>
+                                        <p class="skill-list">Django (python), Android (Java), CSS, Teamwork...</p>
+                                    </div>
+                                    <div class="action-links">
+                                        <a  href="https://reportlegend.com/" target="_blank" class="btn btn-primary"><i class="fa fa-link"></i> Visit</a>
+                                        <a  href="https://play.google.com/store/apps/details?id=com.muva.report_legend_android" target="_blank" class="btn btn-primary"><i class="fab fa-google-play"></i> Android</a>
+                                        <a  href="https://itunes.apple.com/us/app/report-legend/id1361999545?platform=iphone&preserveScrollPosition=true#platform/iphone" target="_blank" class="btn btn-primary"><i class="fab fa-app-store-ios"></i> iOS</a>
+                                    </div>
+                                </div>
+                                <img src="images/portfolio/report_legend.png" alt="imgPort1" class="img-fluid">
+                            </div>
+                        </div>
+                        <!-- End Project 2 -->
+
+
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-2">Clients and Friends:
+                        </div>
+                        <div class="md-10 clients" align="center">
+                            <img src="images/portfolio/muva-logo.png" alt="MUVA" onclick="window.open('https://muva.tech/','_blank');return false;" title="Muva Technologies (Primary Client)">
+                            <img src="images/portfolio/QED-Solutions.png" alt="QED" onclick="window.open('https://www.qedsolutions.co.ke/','_blank');return false;" title="QED Solutions (through MUVA)">
+                            <img src="images/portfolio/R4H-logo.png" alt="R4H" onclick="window.open('https://www.remit4health.com/','_blank');return false;" title="Remit for Health (through MUVA)">
+                            <img src="images/portfolio/rcl_logo_inverted.png" alt="RCL" onclick="window.open('https://rcredit.co.ke','_blank');return false;" title="Resolution Insurance Credit Limited (through MUVA)">
+                            <img src="images/portfolio/saspacity-logo.png" alt="Saspacity" onclick="window.open('https://saspacity.com/','_blank');return false;" title="Saspacity Beauty and Grooming (through MUVA)">
+
                         </div>
                     </div>
-<!--                    <div class="row">-->
-<!--                        &lt;!&ndash; Start Image Number 1 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item websites">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Complete Logistics</h4>-->
-<!--                                        <span>Websites</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="video" href="http://completelogisticslimited.com/">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/complete_logistics.png" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 1 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 2 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item systems">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Report Legend</h4>-->
-<!--                                        <span>Systems</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="video" href="projects/report_legend">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/report_legend.png" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 2 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 3 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item web">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Web Design</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/03.jpeg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/03.jpeg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 3 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 4 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item marketing">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Marketing</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/04.jpg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/04.jpg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 4 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 5 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item web">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Web Design</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/05.jpg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/05.jpg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 5 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 6 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item graphic">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Graphic Design</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/06.jpg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/06.jpg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 6 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 7 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item marketing less">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Marketing</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/07.jpg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/07.jpg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 7 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 8 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item graphic less">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Graphic Design</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/08.jpg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/08.jpg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 8 &ndash;&gt;-->
-<!--                        &lt;!&ndash; ===================== &ndash;&gt;-->
-<!--                        &lt;!&ndash; Start Image Number 9 &ndash;&gt;-->
-<!--                        <div class="col-lg-4 col-md-6 col-sm-12">-->
-<!--                            <div class="item web less">-->
-<!--                                <div class="over">-->
-<!--                                    <div class="info-img">-->
-<!--                                        <h4>Title Projet</h4>-->
-<!--                                        <span>Web Design</span>-->
-<!--                                    </div>-->
-<!--                                    <a class="image" href="images/portfolio/09.jpg">-->
-<!--                                            &lt;!&ndash; ^ And Here &ndash;&gt;-->
-<!--                                        <i class="fa fa-arrows-alt"></i>-->
-<!--                                    </a>-->
-<!--                                </div>-->
-<!--                                <img src="images/portfolio/09.jpg" alt="imgPort1" class="img-fluid">-->
-<!--                                        &lt;!&ndash; Here ^ You Can Change image And Up &ndash;&gt;-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; End Image Number 9 &ndash;&gt;-->
-<!--                        &lt;!&ndash; You can add more images here.. &ndash;&gt;-->
-<!--                    </div>-->
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10" align="center" style="font-size: 10px"><p><b>NOTE: </b>All project rights reserved by project clients. All credit reserved by subcontracting clients.</p></div>
+                    </div>
                 </div>
             </div>
+
         </section>
-        
+
         <!-- End Work -->
-        
-        
+
+
         <!-- Start Testimonials -->
 <!--        <section id="testim-cont" class="testim">-->
 <!--            <div class="title">-->
@@ -695,7 +690,7 @@
 
 <!--            &lt;!&ndash; End Client &ndash;&gt;-->
 <!--        </section>-->
-        
+
         <!-- Start Contact -->
         <section id="contact-cont" class="contact">
             <div class="title">
@@ -770,9 +765,9 @@
 <!--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d657.6933406296221!2d37.014354668229494!3d-1.1082053415075768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fc6c2ce532193bc!2sMuva+Technologies+Ltd+(muvatech)!5e0!3m2!1sen!2ske!4v1550157322480" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-            
+
             <!-- Start Footer -->
-            
+
             <footer>
                 <p>© Copyright <script>document.write((new Date()).getFullYear().toString());</script>. </p>
                 <p>No Right Reserved &#9786;</p>
@@ -780,11 +775,11 @@
 
             <!-- End Footer -->
         </section>
-        
+
         <!-- End Contact -->
-        
+
         <!-- Start Loading -->
-        
+
         <div class="loading">
             <div class="blob-grid">
                 <div class="blob blob-0"></div>
@@ -795,7 +790,7 @@
                 <div class="blob blob-5"></div>
             </div>
         </div>
-        
+
         <!-- End Loading -->
 
         <script>
