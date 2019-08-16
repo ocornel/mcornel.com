@@ -658,6 +658,10 @@ div > a > img {
       background-size: 43px;
       width: 100%;
       top: 65px; }
+    .navbar.small-menu .logo .bg_custom_logo {
+      background-size: 43px;
+      width: 100%;
+      top: 65px; }
     .navbar.small-menu .nav-item span {
       display: none; }
     .navbar.small-menu .nav-item a {
@@ -737,7 +741,7 @@ div > a > img {
       position: absolute;
       top: 25px;
       left: 0; }
-    .navbar .logo .bg_custon_logo {
+    .navbar .logo .bg_custom_logo {
       background-image: url(../images/mcornel-logo.svg);
       /* Here The Light Logo */
       background-size: 50px;
