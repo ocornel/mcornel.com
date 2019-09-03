@@ -1,14 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myModule">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Angular Baby Steps</title>
     <script src="js/angular.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="js/scripts.js"></script>
 
 </head>
-<body ng-app>
-<div>
-    <p>10 + 7 = {{ 10 !=3}}</p>
+<body ng-controller="myController">
+<div  class="jumbotron">
+    <h1>HOW I LEARNED ANGULARJS LIKE  A BABY </h1>
+    # simple message # <br>
+    <p>{{message}}</p>
+    <hr>
+    # concatenating object attributes # <br>
+    {{user.first_name +" " + user.last_name}} <br>
+    <hr>
+    # using ng-src to attach image # <br>
+    <img ng-src="{{user.ppic}}" style="height: 50px" alt="{{ user.first_name + ' ppic'}}">
+    <br>
+    <hr>
+    # two way binding using predefined model # <br>
+    <input type="text" ng-model="input_data">
+    <p>Input model defined: {{input_data}}</p>
+
+    <hr># two way binding with new undefined model # <br>
+    <input type="text" ng-model="new_model">
+    <p>Input model on the fly: {{new_model}}</p>
+
+    <hr># two way binding for select # <br>
+    <select name="" id="role" ng-model="user_role">
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+    </select>
+    {{user_role}} <br>
+
+    <hr># two way binding for textarea # <br>
+    <textarea name="" id="paragraph" cols="30" rows="10" ng-model="paragraph"></textarea>
+    <p>{{paragraph}}</p>
+    <hr>
+
+    <hr># two way binding an object (observe with change the concatenating section)# <br>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td>
+                <input type="text" ng-model="user.first_name">
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                <input type="text" ng-model="user.last_name">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender Name</td>
+            <td>
+                <input type="text" ng-model="user.gender">
+            </td>
+        </tr>
+    </table>
+    <hr># looping an array using ng-repeat # <br>
+    <table class="table-hover table-striped table-bordered table-success">
+        <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Gender Name</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="worker in co_workers">
+            <td>{{worker.first_name}}</td>
+            <td>{{worker.last_name}}</td>
+            <td>{{worker.gender}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr># nesting ng-repeat and array counter, index of item in collection and index of parent  and using ng-init #
+    <ul>
+        <li ng-repeat="country in countries" ng-init="country_index=$index">
+            {{country_index}}. {{ country.name}} - {{country.cities.length}} cities. Index = {{$index}}
+            <ul>
+                <li ng-repeat="city in country.cities">{{ city.name}}. Parent index = {{$parent.$index}}</li>
+            </ul>
+        </li>
+    </ul>
+    <hr>#
+
 </div>
+
 </body>
 </html>
