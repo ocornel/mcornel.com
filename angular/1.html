@@ -76,7 +76,7 @@
         <tr ng-repeat="employee in co_workers | limitTo:row_limit | orderBy:sortColumn:reverseSort | filter:searchText:exactMatch">
             <td>{{employee.first_name + ' ' + employee.last_name}}</td>
             <td>{{employee.dob  | date: "dd/MM/yyyy"}}</td>
-            <td>{{employee.gender | uppercase}}</td>
+            <td>{{employee.gender | man_woman| uppercase}}</td>
             <td>{{employee.salary|number:2}}</td>
             <td>{{employee.salary|currency:"KSH. ":1}}</td>
             <td>{{employee.status_text}}</td>
