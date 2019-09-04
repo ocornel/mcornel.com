@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Baby Steps 1</title>
+    <script src="js/angular.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/filters.js"></script>
+
+</head>
+<body ng-controller="myController">
+<div class="container">
+    <a href=".." target="_blank">back</a>
+
+    # Events in Angular JS (ng-click) and orderBy filter using an expression#
+    <br>
+    <table>
+        <thead>
+        <tr>
+            <th>NAME</th>
+            <th>LIKES</th>
+            <th>DISLIKES</th>
+            <th>RESULT</th>
+            <th>ACTIONS</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="technology in technologies | orderBy:'-likes - dislikes'">
+            <td>{{technology.name}}</td>
+            <td>{{technology.likes|number}}</td>
+            <td>{{technology.dislikes|number}}</td>
+            <td>{{technology.likes - technology.dislikes}}</td>
+            <td>
+                <input type="button" value="like" ng-click="like(technology)" class="btn-sm btn-info">
+                <input type="button" value="dislike" ng-click="dislike(technology)" class="btn-sm btn-danger">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    # filters in Angular (format, sort, filter data. Can be used with a binding expresion or a directive)# <br>
+    Display <input type="number" step="1" min="0" max="{{co_workers.length}}" ng-model="row_limit"> Rows |
+    Order By: <select ng-model="sortColumn">
+    <option value="first_name">Name Asc</option>
+    <option value="-first_name">Name Desc</option>
+    <option value="dob">DOB Asc</option>
+    <option value="-dob">DOB Desc</option>
+    <option value="gender">Gender Asc</option>
+    <option value="-gender">Gender Desc</option>
+    <option value="salary">Salary Asc</option>
+    <option value="-salary">Salary Desc</option>
+</select> |
+    Search: <input type="text" placeholder="Search all..." ng-model="searchText">
+    <br>
+    Advanced:
+    <input type="text" ng-model="searchText.first_name" placeholder="First name">
+    <input type="text" ng-model="searchText.last_name" placeholder="Last name">
+    <input type="checkbox" ng-model="exactMatch"> Exact Match
+    <table>
+        <thead>
+        <tr>
+            <th ng-click="sortData('first_name')">Name <div ng-class="getSortClass('first_name')"></div></th>
+            <th ng-click="sortData('dob')">DOB <div ng-class="getSortClass('dob')"></div></th>
+            <th ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></th>
+            <th ng-click="sortData('salary')">Salary (number) <div ng-class="getSortClass('salary')"></div></th>
+            <th ng-click="sortData('salary')">Salary (currency) <div ng-class="getSortClass('salary')"></div></th>
+            <th>Status Text <input type="text" placeholder="Search this..." ng-model="searchText.status_text"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="employee in co_workers | limitTo:row_limit | orderBy:sortColumn:reverseSort | filter:searchText:exactMatch">
+            <td>{{employee.first_name + ' ' + employee.last_name}}</td>
+            <td>{{employee.dob  | date: "dd/MM/yyyy"}}</td>
+            <td>{{employee.gender | uppercase}}</td>
+            <td>{{employee.salary|number:2}}</td>
+            <td>{{employee.salary|currency:"KSH. ":1}}</td>
+            <td>{{employee.status_text}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+    # Search through custom multiple columns # <br>
+
+    Search: <input type="text" placeholder="Search first name and status" ng-model="search2">
+    <br>
+    <table>
+        <thead>
+        <tr>
+            <th>Name </th>
+            <th >DOB </th>
+            <th >Gender </th>
+            <th >Salary (number)</th>
+            <th >Salary (currency)</th>
+            <th>Status Text</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="employee in co_workers | filter:search">
+<!--            <td>{{employee.first_name + ' ' + employee.last_name}}</td>-->
+            <td>{{employee | full_name}}</td>
+            <td>{{employee.dob  | date: "dd/MM/yyyy"}}</td>
+            <td>{{employee.gender| man_woman | uppercase }}</td>
+            <td>{{employee.salary|number:2}}</td>
+            <td>{{employee.salary|currency}}</td>
+            <td>{{employee.status_text}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
