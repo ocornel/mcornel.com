@@ -87,6 +87,7 @@
     # Search through custom multiple columns # <br>
 
     Search: <input type="text" placeholder="Search first name and status" ng-model="search2">
+    <input type="checkbox" ng-model="hide_salary"> Hide all Salary <input type="checkbox" ng-model="maskSalary"> Mask Salary number
     <br>
     <table>
         <thead>
@@ -94,8 +95,8 @@
             <th>Name </th>
             <th >DOB </th>
             <th >Gender </th>
-            <th >Salary (number)</th>
-            <th >Salary (currency)</th>
+            <th  ng-show="!hide_salary">Salary (number)</th>
+            <th  ng-hide="hide_salary">Salary (currency)</th>
             <th>Status Text</th>
 
         </tr>
@@ -106,8 +107,9 @@
             <td>{{employee | full_name}}</td>
             <td>{{employee.dob  | date: "dd/MM/yyyy"}}</td>
             <td>{{employee.gender| man_woman | uppercase }}</td>
-            <td>{{employee.salary|number:2}}</td>
-            <td>{{employee.salary|currency}}</td>
+            <td ng-show="!hide_salary" ng-hide="maskSalary">{{employee.salary|number:2}}</td> <!--Using ng-show then negate -->
+            <td ng-show="maskSalary">#####</td>
+            <td ng-hide="hide_salary">{{employee.salary|currency}}</td>
             <td>{{employee.status_text}}</td>
         </tr>
         </tbody>
