@@ -267,9 +267,9 @@ var myApp = angular.module('myModule', [])
         }
     })
     .controller('secondController', function ($scope, $http) {
-        var test_bed = 'local';
-        // var test_bed = 'live';
-        if (test_bed == 'local') {
+        // var test_bed = 'local';
+        var test_bed = 'live';
+        if (test_bed === 'local') {
             $http.get('http://localhost/mcornel.com/angular/get_salons.php')
                 .then(function (response) {
                     $scope.salons = response.data;
