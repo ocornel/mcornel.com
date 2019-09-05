@@ -246,11 +246,9 @@ var myApp = angular.module('myModule', [])
             return item.first_name.toLowerCase().indexOf($scope.search2.toLowerCase()) !== -1 ||             // toLowerCase() prevent case sensitivity
                 item.status_text.toLowerCase().indexOf($scope.search2.toLowerCase()) !== -1;
 
-        }
+        };
 
-
-
-
+        $scope.employee_view = "employee_table.html";
 
     })
     // custom filter on same file as module and controller
@@ -266,6 +264,22 @@ var myApp = angular.module('myModule', [])
                     return 'Unknown';
 
             }
+        }
+    })
+    .controller('secondController', function ($scope, $http) {
+        var test_bed = 'local';
+        // var test_bed = 'live';
+        if (test_bed == 'local') {
+            $http.get('http://localhost/mcornel.com/angular/get_salons.php')
+                .then(function (response) {
+                    $scope.salons = response.data;
+                })
+        }
+        else {
+            $http.get('https://mcornel.com/angular/get_salons.php')
+                .then(function (response) {
+                    $scope.salons = response.data;
+                })
         }
     })
 ;

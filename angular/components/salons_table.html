@@ -1,0 +1,26 @@
+Display <input type="number" step="1" min="0" max="{{salons.length}}" ng-model="row_limit"> Rows
+Search: <input type="text" placeholder="Search all..." ng-model="searchText">
+<br>
+<table>
+    <thead>
+    <tr>
+        <th ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></th>
+        <th ng-click="sortData('type')">Type <div ng-class="getSortClass('type')"></div></th>
+        <th ng-click="sortData('location')">Location <div ng-class="getSortClass('location')"></div></th>
+        <th ng-click="sortData('address')">Address <div ng-class="getSortClass('address')"></div></th>
+        <th ng-click="sortData('created_at')">Created At <div ng-class="getSortClass('created_at')"></div></th>
+        <th>About</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="salon in salons | limitTo:row_limit | orderBy:sortColumn:reverseSort | filter:searchText">
+        <td>{{salon.name}}</td>
+        <td>{{salon.type }}</td>
+        <td>{{salon.location}}</td>
+        <td>{{salon.address}}</td>
+        <td>{{salon.created_at }}</td>
+        <td>{{salon.about}}</td>
+    </tr>
+    </tbody>
+</table>

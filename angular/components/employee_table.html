@@ -1,0 +1,17 @@
+This table is in an external file <br>
+<table>
+    <thead>
+    <tr>
+        <td>First Name</td>
+        <td>Gender</td>
+        <td>Salary</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="employee in employees" ng-init="name = employee.first_name">
+        <td>{{name}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.salary}}</td>
+    </tr>
+    </tbody>
+</table>

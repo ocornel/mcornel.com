@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Baby Steps 2</title>
+    <script src="js/angular.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/filters.js"></script>
+
+</head>
+<body ng-controller="myController">
+<div class="container" ng-init="employees = [
+            {'first_name': 'Herons','last_name': 'Odhiambo','gender': 'Male',salary: 50000.765},
+            {'first_name': 'Triza','last_name': 'Njeri','gender': 'Female',salary: 150000.765},
+            {'first_name': 'Mark','last_name': 'Kariuki','gender': 'Male',salary: 50670.765}
+            ]">
+# using ng-init to initiate variables locally # <br>
+    <table>
+        <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Gender</td>
+            <td>Salary</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="employee in employees" ng-init="name = employee.first_name">
+            <td>{{name}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.salary}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    # using ng-include to reuse templates # <br>
+<!--    <div ng-include="'employee_table.html'"></div>-->
+    Display Employees as: <select ng-model="employee_view">
+    <option value="components/employee_table.html">Table</option>
+    <option value="components/employee_list.html">List</option>
+</select>
+    <div ng-include="employee_view"></div>
+
+</div>
+</body>
+</html>
