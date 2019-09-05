@@ -19,7 +19,7 @@ Search: <input type="text" placeholder="Search all..." ng-model="searchText">
         <td>{{salon.type }}</td>
         <td>{{salon.location}}</td>
         <td>{{salon.address}}</td>
-        <td>{{salon.created_at }}</td>
+        <td>{{salon.created_at | my_date_filter| date: "dd/MM/yyyy"}}</td>
         <td>{{salon.about}}</td>
     </tr>
     </tbody>

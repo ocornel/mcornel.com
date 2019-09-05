@@ -106,7 +106,7 @@
 <!--            <td>{{employee.first_name + ' ' + employee.last_name}}</td>-->
             <td>{{employee | full_name}}</td>
             <td>{{employee.dob  | date: "dd/MM/yyyy"}}</td>
-            <td>{{employee.gender| man_woman | date:"dd/MM/yyyy" | uppercase }}</td>
+            <td>{{employee.gender| man_woman | uppercase }}</td>
             <td ng-show="!hide_salary" ng-hide="maskSalary">{{employee.salary|number:2}}</td> <!--Using ng-show then negate -->
             <td ng-show="maskSalary">#####</td>
             <td ng-hide="hide_salary">{{employee.salary|currency}}</td>

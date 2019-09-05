@@ -6,18 +6,10 @@ myApp.filter('full_name', function () {
 })
     .filter('my_date_filter', function () {
      return function (date_string) {
-
          // Split timestamp into [ Y, M, D, h, m, s ]
-         var t = date_string.split(/[- :]/);
-         // console.log(t);
-
-// Apply each element to the Date function
-         var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-//
-//          console.log(d);
-// -> Wed Jun 09 2010 14:12:01 GMT+0100 (BST)
-         // d = "Hello";
-         return d;
+         let timestamp = date_string.split(/[- :]/);
+         // Apply each element to the Date function
+         return new Date(Date.UTC(timestamp[0], timestamp[1] - 1, timestamp[2], timestamp[3], timestamp[4], timestamp[5]));
      }
  })
 ;
