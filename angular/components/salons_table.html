@@ -1,5 +1,7 @@
-Display <input type="number" step="1" min="0" max="{{salons.length}}" ng-model="row_limit"> Rows
+Display <input type="number" step="1" min="0" max="{{salons.length}}" value="{{salons.length}}" ng-model="row_limit"> Rows
 Search: <input type="text" placeholder="Search all..." ng-model="searchText">
+<br>
+{{error}}
 <br>
 <table>
     <thead>

@@ -204,7 +204,6 @@ var myApp = angular.module('myModule', [])
             {name: "AngularJS", likes: 0, dislikes: 0},
         ];
 
-
         $scope.message = "AngularJS Tutorial";
         $scope.user = employee;
         $scope.input_data = "Hello Angular";
@@ -245,7 +244,6 @@ var myApp = angular.module('myModule', [])
 
             return item.first_name.toLowerCase().indexOf($scope.search2.toLowerCase()) !== -1 ||             // toLowerCase() prevent case sensitivity
                 item.status_text.toLowerCase().indexOf($scope.search2.toLowerCase()) !== -1;
-
         };
 
         $scope.employee_view = "employee_table.html";
@@ -262,24 +260,38 @@ var myApp = angular.module('myModule', [])
                     return 'Woman';
                 default:
                     return 'Unknown';
-
             }
         }
     })
-    .controller('secondController', function ($scope, $http) {
-        // var test_bed = 'local';
-        var test_bed = 'live';
-        if (test_bed === 'local') {
-            $http.get('http://localhost/mcornel.com/angular/get_salons.php')
-                .then(function (response) {
-                    $scope.salons = response.data;
+    .controller('secondController', function ($scope, $http, $log, $stringServices) {
+            var test_bed = 'local';
+            // var test_bed = 'live';
+
+            var successCallBack = function (response) {
+                $scope.salons = response.data;
+                $log.info(response);  // using built in service to log the response
+            };
+
+            var errorCallBack = function (reason) {
+                $scope.error = reason.data;
+            };
+
+            if (test_bed === 'local') {
+                $http({
+                    method: 'GET',
+                    url: 'http://localhost/mcornel.com/angular/get_salons.php'
                 })
+                // the else part shows a shorthand method to achieve the same get request (ignore the url change)
+                    .then(successCallBack, errorCallBack);
+            } else {
+                $http.get('https://mcornel.com/angular/get_salons.php')
+                    .then(successCallBack, errorCallBack)
+            }
+
+            $scope.processString = function (input) {
+                $scope.output = $stringServices.addSpaces(input);
+            }
+
         }
-        else {
-            $http.get('https://mcornel.com/angular/get_salons.php')
-                .then(function (response) {
-                    $scope.salons = response.data;
-                })
-        }
-    })
+    )
 ;
