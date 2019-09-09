@@ -1,5 +1,5 @@
 var myApp = angular.module('myModule', [])
-    .controller("myController", function ($scope) {
+    .controller("myController", function ($scope, $location, $anchorScroll) {
         var employee = {
             'first_name': "Martin",
             'last_name': "Cornel",
@@ -247,6 +247,15 @@ var myApp = angular.module('myModule', [])
         };
 
         $scope.employee_view = "employee_table.html";
+
+
+        // Anchorscroll
+        $scope.scrollTo = function(element_id) {
+            $location.hash(element_id);  // Appends whatever is passed into it to the browser url with a preceding #
+            $anchorScroll.yOffset = 20;  // sets the amount of space to leave from the target to the top edge of the browser.
+            $anchorScroll();  // Reads the appended # fragment of the url and scroll to it
+        }
+
 
     })
     // custom filter on same file as module and controller

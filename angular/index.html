@@ -12,6 +12,8 @@
 </head>
 <body ng-controller="myController">
 <div  class="jumbotron">
+    <button id="btn_top" ng-click="scrollTo('btn_bottom')">Go to bottom of the page</button>
+    <hr>
     <h1>HOW I LEARNED ANGULARJS LIKE  A BABY </h1>
     # simple message # <br>
     <p>{{message}}</p>
@@ -94,6 +96,7 @@
         </li>
     </ul>
     <hr>#
+    <button id="btn_bottom" ng-click="scrollTo('btn_top')">Go to top of page</button>
 
 </div>
 
