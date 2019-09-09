@@ -288,12 +288,12 @@ var myApp = angular.module('myModule', [])
             if (test_bed === 'local') {
                 $http({
                     method: 'GET',
-                    url: 'http://localhost/mcornel.com/angular/get_salons.php'
+                    url: 'http://localhost/mcornel.com/angular/php/get_salons.php'
                 })
                 // the else part shows a shorthand method to achieve the same get request (ignore the url change)
                     .then(successCallBack, errorCallBack);
             } else {
-                $http.get('https://mcornel.com/angular/get_salons.php')
+                $http.get('https://mcornel.com/angular/php/get_salons.php')
                     .then(successCallBack, errorCallBack)
             }
 
