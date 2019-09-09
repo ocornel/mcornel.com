@@ -263,7 +263,7 @@ var myApp = angular.module('myModule', [])
             }
         }
     })
-    .controller('secondController', function ($scope, $http, $log, $stringServices) {
+    .controller('secondController', function ($scope, $http, $log, stringServices) {
             var test_bed = 'local';
             // var test_bed = 'live';
 
@@ -289,7 +289,7 @@ var myApp = angular.module('myModule', [])
             }
 
             $scope.processString = function (input) {
-                $scope.output = $stringServices.addSpaces(input);
+                $scope.output = stringServices.addSpaces(input);
             }
 
         }

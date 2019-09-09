@@ -1,4 +1,3 @@
-
 myApp.factory('stringServices', function () {
     // factory is used to define services in an app. Services return js objects with functions
     return {
