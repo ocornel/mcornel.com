@@ -273,8 +273,8 @@ var myApp = angular.module('myModule', [])
         }
     })
     .controller('secondController', function ($scope, $http, $log, stringServices) {
-            var test_bed = 'local';
-            // var test_bed = 'live';
+            // var test_bed = 'local';
+            var test_bed = 'live';
 
             var successCallBack = function (response) {
                 $scope.salons = response.data;
