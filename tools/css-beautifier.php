@@ -195,14 +195,6 @@
     <?php include('parts/tools.php'); ?>
 </div>
 <?php include('parts/footer.html') ?>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/FileSaver.min.js"></script>
-<script src="js/zclip/jquery.zclip.min.js"></script>
-<script src="js/ace/src-min-noconflict/ace.js"></script>
-<script src="js/ace/src-min-noconflict/ext-language_tools.js"></script>
-<script src="js/ace/src-min-noconflict/ext-themelist.js"></script>
-<script src="js/vkbeautify.min.js"></script>
 <script src="js/cssbeautify.min.js"></script>
 <script src="js/css_beautifier.js"></script>
 </body>
