@@ -100,7 +100,9 @@ $(document).ready(function(e) {
 				$("html, body").animate({
 					scrollTop: $("p.info_out").offset().top - 10
 				}, 500);
-				$("#clear").click();
+				$("#name,#email,#message").val("");
+				$("#name,#email,#message").parents("div.form-group").removeClass("has-error");
+
 				// if(data === "Thank You!")
 				// {
 				//
