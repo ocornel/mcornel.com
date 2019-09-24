@@ -70,7 +70,7 @@ $(document).ready(function(e) {
 		blob = new Blob(["" + data + ""], {
 			type : "text/plain;charset=utf-8"
 		});
-		saveAs(blob, "data.txt");
+		saveAs(blob, "output.json");
     });
 	
 	$("#beautify_json").click(function(e) {

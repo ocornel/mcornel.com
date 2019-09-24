@@ -168,7 +168,7 @@ $(document).ready(function(e) {
 		blob = new Blob(["" + data + ""], {
 			type : "text/plain;charset=utf-8"
 		});
-		saveAs(blob, "data.txt");
+		saveAs(blob, "output.xml");
     });
 	
 	$("#max_code1").click(function(e) {
