@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--    todo get title, description and guide from request url -->
     <title>Online CSS Beautifier - Consult mCornel</title>
     <meta name="description"
           content="Beautify css code with online css beautifier. Format your dirty, minified css code and make it more readable using our online css beautifier, formatter, prettifier."/>
