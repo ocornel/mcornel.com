@@ -38,7 +38,7 @@ $(document).ready(function(e) {
 		editorAce.setValue("Please wait ...");
 		$.ajax({
 			type	: "POST",
-			url		: "/get-sample.php",
+			url		: "get-sample.php",
 			data	: {"data" : data},
 			success : function(data)
 			{

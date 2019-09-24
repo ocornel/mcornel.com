@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Source+Sans+Pro');
 
 :root {
-    --mc-blue: #20A8D8;
+    --mc-blue: #55aea1;
     --mc-navy: #073A5C;
     --mc-orange: #F6931D;
     --mc-grey: #F2F2F2;
@@ -39,8 +39,8 @@ ul.app_cat_ul li a:hover{
     background-color:#EEE;
 }
 .footer{
-    background-color: var(--mc-darkgrey);
-    color:#666;
+    background-color: var(--mc-blue);
+    color:#fff;
     height:60px;
     text-align:center;
     padding:10px;
@@ -80,7 +80,7 @@ ul.nav_ul li{
 ul.nav_ul li a{
     padding:12px;
     display:block;
-    color: var(--mc-darkgrey);
+    color: var(--mc-blue);
     background-color:#FFF;
     border:1px solid #EEE;
     text-decoration:none;
@@ -90,10 +90,11 @@ ul.nav_ul li a{
     -o-transition: all .3s ease;
     transition: all .3s ease;
     -webkit-border-radius: 4px;
-    border-radius: 4px;
+    border-radius: unset;
 }
 ul.nav_ul li a:hover{
-    background-color:#EEE;
+    background-color: var(--mc-blue);
+    color:#FFF;
 }
 @media (max-width : 768px) {
     div.header_nav{
@@ -107,7 +108,19 @@ ul.nav_ul li a:hover{
 }
 ul.ul_buttons li a{
     margin:5px 0px;
-    color: var(--mc-darkgrey);
+    color: var(--mc-blue);
     background-color:#FFF;
     border:1px solid #C0C0C0;
+}
+
+.footer {
+    height: unset;
+}
+
+.well {
+    background-image: linear-gradient(to bottom, #ccc 0, #f5f5f5 100%);
+}
+
+.app_cat_h {
+    border-bottom: 4px solid var(--mc-navy);
 }

@@ -185,7 +185,7 @@ $(document).ready(function(e) {
 		editorAce1.setValue("Please wait ...");
 		$.ajax({
 			type	: "POST",
-			url		: "/get-sample.php",
+			url		: "get-sample.php",
 			data	: {"data" : data},
 			success : function(data)
 			{
