@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/csv_to_html_converter.css" media="all"/></head>
     <?php include('parts/head.php'); ?>
+    <link rel="stylesheet" type="text/css" href="css/csv_to_html_converter.css" media="all"/></head>
 </head>
 <body>
 <?php include('parts/header.php'); ?>

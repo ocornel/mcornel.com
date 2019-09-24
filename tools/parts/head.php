@@ -1,3 +1,14 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148595578-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148595578-1');
+</script>
+
+
 <?php
 $connection = new mysqli("localhost", "angular_user", "angular_password", "angular_practice") or die(mysqli_error());
 $url = basename($_SERVER['REQUEST_URI']);
