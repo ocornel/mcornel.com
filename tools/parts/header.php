@@ -8,7 +8,7 @@
                     </div>
                     <div class="header_nav">
                         <ul class="nav_ul">
-                            <li><a href="">Home</a></li>
+                            <li><a href="../tools">Home</a></li>
                             <li><a href="#all_tools">All Tools</a></li>
 <!--                            <li><a href="../samples.php">Samples</a></li>-->
                             <li><a href="../tools/contact-us.php">Contact Us</a></li>
