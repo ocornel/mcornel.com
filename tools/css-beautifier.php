@@ -30,7 +30,7 @@
                                 <ul class="nav_ul ul_buttons">
                                     <li><a id="load_url" href="css-beautifier.php#">Load&nbsp;Url</a></li>
                                     <li><a id="browse" href="css-beautifier.php#">Browse</a></li>
-                                    <li><a id="beautify_css" href="css-beautifier.php#">Beautify&nbsp;css</a></li>
+                                    <li><a id="beautify_css" href="css-beautifier.php#">Format&nbsp;css</a></li>
                                     <li><a id="minify_css" href="css-beautifier.php#">Minify&nbsp;css</a></li>
                                     <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal"
                                            data-backdrop="false" href="css-beautifier.php#">Editor&nbsp;Options</a></li>

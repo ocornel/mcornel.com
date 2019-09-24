@@ -28,7 +28,7 @@
                             <li><a id="load_url" href="csv-to-json-converter.php#">Load&nbsp;Url</a></li>
                             <li><a id="browse" href="csv-to-json-converter.php#">Browse</a></li>
                             <li><a id="csv_to_json" href="csv-to-json-converter.php#">CSV&nbsp;to&nbsp;JSON</a></li>
-                            <li><a id="beautify_json" href="csv-to-json-converter.php#">Beautify&nbsp;JSON</a></li>
+                            <li><a id="beautify_json" href="csv-to-json-converter.php#">Format&nbsp;JSON</a></li>
                             <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="csv-to-json-converter.php#">Editor&nbsp;Options</a></li>
                             <li><a id="download" href="csv-to-json-converter.php#">Download</a></li>
                             <li><a id="clear" href="csv-to-json-converter.php#">Clear</a></li>

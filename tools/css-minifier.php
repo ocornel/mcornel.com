@@ -28,7 +28,7 @@
                             <li><a id="load_url" href="css-minifier.php#">Load&nbsp;Url</a></li>
                             <li><a id="browse" href="css-minifier.php#">Browse</a></li>
                             <li><a id="minify_css" href="css-minifier.php#">Minify&nbsp;css</a></li>
-                            <li><a id="beautify_css" href="css-minifier.php#">Beautify&nbsp;css</a></li>
+                            <li><a id="beautify_css" href="css-minifier.php#">Format&nbsp;css</a></li>
                             <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="css-minifier.php#">Editor&nbsp;Options</a></li>
                             <li><a id="download" href="css-minifier.php#">Download</a></li>
                             <li><a id="clear" href="css-minifier.php#">Clear</a></li>

@@ -28,7 +28,7 @@
                             <li><a id="load_url" href="add-nofollow-to-link.php#">Load&nbsp;Url</a></li>
                             <li><a id="browse" href="add-nofollow-to-link.php#">Browse</a></li>
                             <li><a id="add_nofollow" href="add-nofollow-to-link.php#">Add&nbsp;Nofollow</a></li>
-                            <li><a id="beautify_html" href="add-nofollow-to-link.php#">Beautify&nbsp;html</a></li>
+                            <li><a id="beautify_html" href="add-nofollow-to-link.php#">Format&nbsp;html</a></li>
                             <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="add-nofollow-to-link.php#">Editor&nbsp;Options</a></li>
                             <li><a id="download" href="add-nofollow-to-link.php#">Download</a></li>
                             <li><a id="clear" href="add-nofollow-to-link.php#">Clear</a></li>

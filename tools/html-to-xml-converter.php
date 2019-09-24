@@ -28,9 +28,9 @@
                             <li><a id="load_url" href="html-to-xml-converter.php#">Load&nbsp;Url</a></li>
                             <li><a id="browse" href="html-to-xml-converter.php#">Browse</a></li>
                             <li><a id="convert" href="html-to-xml-converter.php#">Convert</a></li>
-                            <li><a id="beautify_html" href="html-to-xml-converter.php#">Beautify&nbsp;html</a>
+                            <li><a id="beautify_html" href="html-to-xml-converter.php#">Format&nbsp;html</a>
                             </li>
-                            <li><a id="beautify_xml" href="html-to-xml-converter.php#">Beautify&nbsp;XML</a>
+                            <li><a id="beautify_xml" href="html-to-xml-converter.php#">Format&nbsp;XML</a>
                             </li>
                             <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal"
                                    data-backdrop="false"

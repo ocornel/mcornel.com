@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include('parts/head.php'); ?>
     <link rel="stylesheet" type="text/css" href="css/csv_to_html_converter.css" media="all"/></head>
+<?php include('parts/head.php'); ?>
 </head>
 <body>
 <?php include('parts/header.php'); ?>
@@ -31,7 +31,7 @@
                                     <li><a id="load_url" href="csv-to-html-converter.php#">Load&nbsp;Url</a></li>
                                     <li><a id="browse" href="csv-to-html-converter.php#">Browse</a></li>
                                     <li><a id="convert" href="csv-to-html-converter.php#">Convert</a></li>
-                                    <li><a id="beautify_html" href="csv-to-html-converter.php#">Beautify&nbsp;html</a></li>
+                                    <li><a id="beautify_html" href="csv-to-html-converter.php#">Format&nbsp;html</a></li>
                                     <li><a id="preview" href="csv-to-html-converter.php#">Preview</a></li>
                                     <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="csv-to-html-converter.php#">Editor&nbsp;Options</a></li>
                                     <li><a id="download" href="csv-to-html-converter.php#">Download</a></li>
