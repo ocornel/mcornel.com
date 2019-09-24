@@ -13,7 +13,14 @@
 $connection = new mysqli("localhost", "angular_user", "angular_password", "angular_practice") or die(mysqli_error());
 $url = basename($_SERVER['REQUEST_URI']);
 $tool = mysqli_fetch_assoc($connection->query("SELECT * FROM `tools` WHERE url='$url'"));
+
+//increment tool requests
+$requests = $tool['load_requests'];
+$requests++;
+$id = $tool['id'];
+$connection->query("UPDATE `tools` SET `load_requests` = '$requests' WHERE id = $id");
 ?>
+
 <title><?php echo $tool['title']?></title>
 <meta name="description" content="<?php echo $tool['description']?>"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
