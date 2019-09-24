@@ -100,3 +100,16 @@ ul.ul_buttons li a{
 	background-color:#FFF;
 	border:1px solid #C0C0C0;
 }
+pre{border:0px;}
+ul{
+	list-style:none;
+}
+#code1{
+	height:310px;
+	font-size:14px;
+}
+@media (max-width : 768px) {
+	div.data_well{
+		overflow-x:scroll;
+	}
+}

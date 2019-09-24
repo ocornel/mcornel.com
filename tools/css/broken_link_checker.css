@@ -100,3 +100,5 @@ ul.ul_buttons li a{
 	background-color:#FFF;
 	border:1px solid #C0C0C0;
 }
+/* data tb */
+.data_tb th{text-align:center};
