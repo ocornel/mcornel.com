@@ -95,19 +95,20 @@ $(document).ready(function(e) {
 			data	: {"name" : name, "email" : email, "message" : message},
 			success : function(data)
 			{
-				if(data === "Thank You!")
-				{
-					$("p.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Your message has been sent.').addClass("text-success");
-					$("html, body").animate({
-						scrollTop: $("p.info_out").offset().top - 10
-					}, 500);
-				}else
-				{
-					$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;' + data).addClass("text-danger");
-					$("html, body").animate({
-						scrollTop: $("p.info_out").offset().top - 10
-					}, 500);
-				}
+				$("p.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Your message has been sent.').addClass("text-success");
+				$("html, body").animate({
+					scrollTop: $("p.info_out").offset().top - 10
+				}, 500);
+				// if(data === "Thank You!")
+				// {
+				//
+				// }else
+				// {
+				// 	$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;' + data).addClass("text-danger");
+				// 	$("html, body").animate({
+				// 		scrollTop: $("p.info_out").offset().top - 10
+				// 	}, 500);
+				// }
 			},
 			error 	: function()
 			{
