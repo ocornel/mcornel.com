@@ -1325,7 +1325,7 @@ section.close-menu {
       margin-left: 12px;
       cursor: pointer;
       position: relative; }
-      .contact .form .message .send-btn input.btn {
+      .contact .form .message .send-btn input.btn{
         color: #fff;
         text-transform: uppercase;
         cursor: pointer;
