@@ -10,7 +10,7 @@ function is_email_valid(email)
 	}
 }
 
-function is_form_ok(name, email, message, recaptcha)
+function is_form_ok(name, email, message)
 {
 	valid = true;
 	
@@ -25,7 +25,7 @@ function is_form_ok(name, email, message, recaptcha)
 		$("p.info_out").html("").removeClass("text-danger");
 		$("#name").parents("div.form-group").removeClass("has-error");
 	}
-	
+
 	if(!is_email_valid(email))
 	{
 		$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;Please enter a valid email address.').addClass("text-danger");
@@ -37,7 +37,7 @@ function is_form_ok(name, email, message, recaptcha)
 		$("p.info_out").html("").removeClass("text-danger");
 		$("#email").parents("div.form-group").removeClass("has-error");
 	}
-	
+
 	if(message == "")
 	{
 		$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;Please enter your message.').addClass("text-danger");
@@ -50,18 +50,18 @@ function is_form_ok(name, email, message, recaptcha)
 		$("#message").parents("div.form-group").removeClass("has-error");
 	}
 	
-	if(recaptcha == "")
-	{
-		$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;Please check the recaptcha.').addClass("text-danger");
-		$("html, body").animate({
-			scrollTop: $("p.info_out").offset().top - 10
-		}, 500);
-		valid = false;
-		return false;
-	}else
-	{
-		$("p.info_out").html("").removeClass("text-danger");
-	}
+	// if(recaptcha == "")
+	// {
+	// 	$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;Please check the recaptcha.').addClass("text-danger");
+	// 	$("html, body").animate({
+	// 		scrollTop: $("p.info_out").offset().top - 10
+	// 	}, 500);
+	// 	valid = false;
+	// 	return false;
+	// }else
+	// {
+	// 	$("p.info_out").html("").removeClass("text-danger");
+	// }
 	
 	return valid;
 }
@@ -80,9 +80,8 @@ $(document).ready(function(e) {
 		name = $.trim($("#name").val());
 		email = $.trim($("#email").val());
 		message = $.trim($("#message").val());
-		recaptcha = $.trim(grecaptcha.getResponse());
-		
-		if(!is_form_ok(name, email, message, recaptcha))
+
+		if(!is_form_ok(name, email, message))
 		{
 			return false;
 		}
@@ -92,21 +91,19 @@ $(document).ready(function(e) {
 		}, 500);
 		$.ajax({
 			type	: "POST",
-			url		: "/contact.php",
-			data	: {"name" : name, "email" : email, "message" : message, "g-recaptcha-response" : recaptcha},
+			url		: "../contact.php",
+			data	: {"name" : name, "email" : email, "message" : message},
 			success : function(data)
 			{
 				if(data == "")
 				{
 					$("p.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Your message has been sent.').addClass("text-success");
-					grecaptcha.reset();
 					$("html, body").animate({
 						scrollTop: $("p.info_out").offset().top - 10
 					}, 500);
 				}else
 				{
 					$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;' + data).addClass("text-danger");
-					grecaptcha.reset();
 					$("html, body").animate({
 						scrollTop: $("p.info_out").offset().top - 10
 					}, 500);
@@ -115,7 +112,6 @@ $(document).ready(function(e) {
 			error 	: function()
 			{
 				$("p.info_out").html('<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;Connection lost! Please try again.').addClass("text-danger");
-				grecaptcha.reset();
 				$("html, body").animate({
 					scrollTop: $("p.info_out").offset().top - 10
 				}, 500);
