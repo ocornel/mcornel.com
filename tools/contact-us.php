@@ -4,7 +4,7 @@
     <title>Contact Us - Consult mCornel</title>
     <meta name="description" content="If you have a question about a tool or want to give us your feedback, feel free to contact us."/>
     <link rel="stylesheet" type="text/css" href="css/contact_us.css" media="all"/></head>
-<?php include('parts/head.html');?>
+<?php include('parts/head.php');?>
 </head>
 <body>
 <?php include('parts/header.html'); ?>
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <?php include('parts/tools.html');?>
+    <?php include('parts/tools.php');?>
 </div>
 <?php include('parts/footer.html') ?>
 <script src="https://www.google.com/recaptcha/api.js"></script>

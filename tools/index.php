@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Home of online tools and utilities - Consult mCornel</title>
     <meta name="description" content="Useful online tools like Beautifiers, Minifiers, Converters, Utilities, Validators, Editors for users and developers."/>
-    <?php include('parts/head.html');?>
+    <?php include('parts/head.php');?>
 </head>
 <body>
 <?php include('parts/header.html'); ?>
@@ -20,7 +21,7 @@
                 hope that other users and developers find them useful too. Thanks for visiting Beautify Tools.</p>
         </div>
     </div>
-    <?php include('parts/tools.html');?>
+    <?php include('parts/tools.php');?>
 </div>
 <?php include('parts/footer.html') ?>
 <script src="js/home.js"></script>

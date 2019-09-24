@@ -6,7 +6,7 @@
           content="Beautify css code with online css beautifier. Format your dirty, minified css code and make it more readable using our online css beautifier, formatter, prettifier."/>
     <link rel="stylesheet" type="text/css" href="css/css_beautifier.css" media="all"/>
 </head>
-<?php include('parts/head.html'); ?>
+<?php include('parts/head.php'); ?>
 </head>
 <body>
 <?php include('parts/header.html'); ?>
@@ -160,7 +160,7 @@
             </div>
         </div>
     </div>
-    <?php include('parts/tools.html'); ?>
+    <?php include('parts/tools.php'); ?>
 </div>
 <?php include('parts/footer.html') ?>
 <script src="js/jquery-ui.min.js"></script>
