@@ -95,7 +95,7 @@ $(document).ready(function(e) {
 			data	: {"name" : name, "email" : email, "message" : message},
 			success : function(data)
 			{
-				if(data == "")
+				if(data === "Thank You!")
 				{
 					$("p.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Your message has been sent.').addClass("text-success");
 					$("html, body").animate({
