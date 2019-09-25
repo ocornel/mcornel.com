@@ -276,7 +276,7 @@ $(document).ready(function(e) {
 		{
 			editorAce2.getSession().setUseWorker(false);
 			editorAce2.setValue("Please wait while converting your CSS code.");
-			
+			console.log(data);
 			$.ajax({
 				type	: "POST",
 				url		: "/css-to-less.php",
@@ -289,7 +289,7 @@ $(document).ready(function(e) {
 				error 	: function()
 				{
 					editorAce2.getSession().setUseWorker(false);
-					editorAce2.setValue("Sorry, the connection may be lost! Please try again.");
+					editorAce2.setValue("Sorry, the connection to backend tool may be lost! Please try again later.");
 				}
 			});
 		}

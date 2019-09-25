@@ -289,7 +289,7 @@ $(document).ready(function(e) {
 				error 	: function()
 				{
 					editorAce2.getSession().setUseWorker(false);
-					editorAce2.setValue("Sorry, the connection may be lost! Please try again.");
+					editorAce2.setValue("Sorry, the connection to backend service may be lost! Please try again later.");
 				}
 			});
 		}

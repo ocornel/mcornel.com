@@ -9,7 +9,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1><?php echo $tool['name'] ?></h1>
+            <h1><?php $warning = "";
+                if ($tool['complete'] != 1) {
+                    $warning = " <i class='fa fa-exclamation-triangle text-warning' title='Still in development.'></i> ";
+                }
+                echo ($tool['name'] . $warning) ?></h1>
         </div>
     </div>
     <div class="row">

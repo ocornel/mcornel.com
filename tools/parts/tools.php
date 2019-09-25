@@ -20,7 +20,11 @@ while ($row = mysqli_fetch_assoc($tool_groups)) {
                         <div class=\"app_cat_h\">" . $group['name'] . "</div>
                             <ul class=\"app_cat_ul\">");
                 foreach ($tools as $tool) {
-                    echo("<li><a href=\"" . $tool['url'] . "\">" . $tool['name'] . "</a></li>");
+                    $warning = "";
+                    if ($tool['complete'] != 1) {
+                        $warning = " <i class='fa fa-exclamation-triangle text-warning' title='Still in development.'></i> ";
+                    }
+                    echo("<li><a href=\"" . $tool['url'] . "\">" . $tool['name'] .$warning . "</a></li>");
                 }
                 echo("</ul>
                     </div>");
