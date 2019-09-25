@@ -124,3 +124,7 @@ ul.ul_buttons li a{
 .app_cat_h {
     border-bottom: 4px solid var(--mc-navy);
 }
+
+.text-warning {
+    color: darkorange;
+}
