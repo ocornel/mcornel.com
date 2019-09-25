@@ -1,5 +1,5 @@
 <?php
-$tool_groups = $connection->query("SELECT * FROM tools_groups");
+$tool_groups = $connection->query("SELECT * FROM tools_groups ORDER BY name ASC");
 $groups = [];
 while ($row = mysqli_fetch_assoc($tool_groups)) {
     $groups[] = $row;
@@ -10,7 +10,7 @@ while ($row = mysqli_fetch_assoc($tool_groups)) {
 
             <?php
             foreach ($groups as $group) {
-                $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group['id']);
+                $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group['id'] ." ORDER BY name ASC");
                 $tools = [];
                 while ($item = mysqli_fetch_assoc($group_tools)) {
                     $tools[] = $item;
