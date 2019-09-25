@@ -10,6 +10,11 @@ while ($row = mysqli_fetch_assoc($tool_groups)) {
 
             <?php
             foreach ($groups as $group) {
+                if ($group['display'] != 1) {
+//                    Don't show
+                    continue;
+                }
+
                 $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group['id'] ." ORDER BY name ASC");
                 $tools = [];
                 while ($item = mysqli_fetch_assoc($group_tools)) {

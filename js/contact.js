@@ -79,7 +79,7 @@ $(document).ready(function (e) {
             },
             success: function (data) {
                 console.log(data);
-                $("p.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Your message has been sent.').addClass("text-success");
+                $("p.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;Thank you, your message has been sent.').addClass("text-success");
                 $("html, body").animate({
                     scrollTop: $("p.info_out").offset().top - 10
                 }, 500);

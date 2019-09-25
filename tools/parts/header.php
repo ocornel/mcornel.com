@@ -12,22 +12,59 @@
                         <ul class="nav_ul">
                             <li><a href="../tools"><i class="fa fa-home"></i> Home</a></li>
                             <li><a href="#all_tools"><i class="fa fa-cog"></i> All Tools</a></li>
+                            <li class="dropdown">
+                                <span class="dropbtn"><i class="fa fa-link"></i> Related
+                                    <i class="fa fa-caret-down"></i>
+                                </span>
+                                <span class="dropdown-content">
+                                    <?php
+
+                                    $related_tools_querry = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $tool['tools_group_id'] ." AND id <> ".$tool['id']." ORDER BY RAND() LIMIT 3;");
+                                    $related_tools = [];
+                                    while ($item = mysqli_fetch_assoc($related_tools_querry)) {
+                                        $related_tools[] = $item;
+                                    }
+
+                                    foreach ($related_tools as $related_tool) {
+                                        echo ("<a href=\"" . $related_tool['url'] . "\"> <i class='fa fa-angle-double-right'></i> " . $related_tool['name'] . "</a>");
+                                    }
+                                    $random_tool = mysqli_fetch_assoc($connection->query("SELECT * FROM `tools` WHERE url LIKE '%r.php' ORDER BY RAND() LIMIT 1; "));
+                                    echo ("<a href=\"" . $random_tool['url'] . "\" style=\"border-top: solid 2px var(--mc-navy);border-bottom: solid 2px var(--mc-navy)\"> <i class='fa fa-random'></i> " . $random_tool['name'] . "</a>");
+                                    ?>
+                                </span>
+                            </li>
+
+
+                            <li><a href="#all_tools"><i class="fa fa-cog"></i> All Tools</a></li>
+                            <style>
+                                #how_to_use:hover i:after {
+                                    content: ' How To Use';
+                                }
+
+                                #code_video:hover i:after {
+                                    content: ' Code Video';
+                                }
+
+                                #blog_post:hover i:after {
+                                    content: ' Blog Post';
+                                }
+                            </style>
                             <?php
                             if ($tool['youtube_howto_video']) {
                                 echo "
-                                <li><a href=\"" . $tool['youtube_howto_video'] . "\" target='_blank' title=\"How to use " . $tool['name'] . "\"><i class='fa fa-question'></i> How to Use</a></li>
+                                <li><a href=\"" . $tool['youtube_howto_video'] . "\" target='_blank' title=\"How to use " . $tool['name'] . "\"  id='how_to_use'><i class='fa fa-question'></i></a></li>
                                 ";
                             }
 
                             if ($tool['youtube_code_video']) {
                                 echo "
-                                <li><a href=\"" . $tool['youtube_code_video'] . "\" target='_blank' title=\"Video showing how " . $tool['name'] . " was built\"><i class='fa fa-code'></i> Code Video</a></li>
+                                <li><a href=\"" . $tool['youtube_code_video'] . "\" target='_blank' title=\"Video showing how " . $tool['name'] . " was built\" id='code_video'><i class='fa fa-code'></i></a></li>
                                 ";
                             }
 
                             if ($tool['blog_post']) {
                                 echo "
-                                <li><a href=\"" . $tool['blog_post'] . "\" target='_blank' title=\"Blog post on building " . $tool['name'] . "\"><i class='fab fa-wordpress'></i> Blog Post</a></li>
+                                <li><a href=\"" . $tool['blog_post'] . "\" target='_blank' title=\"Blog post on building " . $tool['name'] . "\" id='blog_post'><i class='fab fa-wordpress'></i></a></li>
                                 ";
                             }
 
