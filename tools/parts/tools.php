@@ -1,5 +1,5 @@
 <?php
-$tool_groups = $connection->query("SELECT * FROM tools_groups ORDER BY name ASC");
+$tool_groups = $connection->query("SELECT * FROM tools_groups ORDER BY tools_count DESC ");
 $groups = [];
 while ($row = mysqli_fetch_assoc($tool_groups)) {
     $groups[] = $row;
@@ -14,12 +14,16 @@ while ($row = mysqli_fetch_assoc($tool_groups)) {
 //                    Don't show
                     continue;
                 }
+                $group_id = $group['id'];
 
-                $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group['id'] ." ORDER BY name ASC");
+                $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group_id ." ORDER BY name ASC");
                 $tools = [];
                 while ($item = mysqli_fetch_assoc($group_tools)) {
                     $tools[] = $item;
                 }
+                $tools_count = count($tools);
+                $connection->query("UPDATE tools_groups SET tools_count = '$tools_count' WHERE id = $group_id");
+
                 echo(
                     "<div class=\"col-md-4\">
                         <div class=\"app_cat_h\">" . $group['name'] . "</div>
