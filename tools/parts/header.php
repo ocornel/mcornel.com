@@ -28,7 +28,7 @@
                                     foreach ($related_tools as $related_tool) {
                                         echo ("<a href=\"" . $related_tool['url'] . "\"> <i class='fa fa-angle-double-right'></i> " . $related_tool['name'] . "</a>");
                                     }
-                                    $random_tool = mysqli_fetch_assoc($connection->query("SELECT * FROM `tools` WHERE url LIKE '%r.php' ORDER BY RAND() LIMIT 1; "));
+                                    $random_tool = mysqli_fetch_assoc($connection->query("SELECT * FROM `tools` WHERE url LIKE '%r.php' AND id <> ".$tool['id']." ORDER BY RAND() LIMIT 1; "));
                                     echo ("<a href=\"" . $random_tool['url'] . "\" style=\"border-top: solid 2px var(--mc-navy);border-bottom: solid 2px var(--mc-navy)\"> <i class='fa fa-random'></i> " . $random_tool['name'] . "</a>");
                                     ?>
                                 </span>
