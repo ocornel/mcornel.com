@@ -15,8 +15,7 @@ while ($row = mysqli_fetch_assoc($tool_groups)) {
                     continue;
                 }
                 $group_id = $group['id'];
-
-                $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group_id ." ORDER BY name ASC");
+                $group_tools = $connection->query("SELECT * FROM tools WHERE tools_group_id=" . $group_id . " ORDER BY name ASC");
                 $tools = [];
                 while ($item = mysqli_fetch_assoc($group_tools)) {
                     $tools[] = $item;
@@ -33,12 +32,12 @@ while ($row = mysqli_fetch_assoc($tool_groups)) {
                     if ($tool['complete'] != 1) {
                         $warning = " <i class='fa fa-exclamation-triangle text-warning' title='Still in development.'></i> ";
                     }
-                    echo("<li><a href=\"" . $tool['url'] . "\">" . $tool['name'] .$warning . "</a></li>");
+                    echo("<li><a href=\"" . $tool['url'] . "\">" . $tool['name'] . $warning . "</a></li>");
                 }
                 echo("</ul>
                     </div>");
             }
             ?>
+        </div>
     </div>
-</div>
 </div>
