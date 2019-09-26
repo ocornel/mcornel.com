@@ -164,7 +164,14 @@
                 </div>
             </div>
         </div>
-    </div>    <!--    End of tool content-->
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="well well-sm data_tb text-left" style="overflow:auto;display:none;"></div>
+        </div>
+    </div>
+    <!--    End of tool content-->
     <?php include('parts/tools.php'); ?>
 </div>
 <?php include('parts/footer.html') ?>
