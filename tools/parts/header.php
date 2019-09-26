@@ -80,10 +80,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <!--            todo put add container here
-            <script async type="text/javascript"-->
-            <!--                    src="http://cdn.carbonads.com/carbon.js?serve=CKYIE5QW&amp;placement=beautifytoolscom"-->
-            <!--                    id="_carbonads_js"></script>-->
+            <!--            todo put add container here -->
         </div>
     </div>
 </div>
