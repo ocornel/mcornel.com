@@ -8,6 +8,9 @@
     gtag('config', 'UA-148595578-1');
 </script>
 
+<!--adds-->
+<script data-ad-client="ca-pub-8078706526441664" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 
 <?php
 $connection = new mysqli("localhost", "angular_user", "angular_password", "angular_practice") or die(mysqli_error());
