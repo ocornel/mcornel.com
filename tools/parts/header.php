@@ -33,9 +33,6 @@
                                     ?>
                                 </span>
                             </li>
-
-
-                            <li><a href="#all_tools"><i class="fa fa-cog"></i> All Tools</a></li>
                             <style>
                                 #how_to_use:hover i:after {
                                     content: ' How To Use';
