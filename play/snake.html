@@ -5,8 +5,8 @@
     <title>Play Arcade Snake</title>
 </head>
 <body>
-<div id="popup" style="display: none; height: 625px; width: 625px; color: green; background: yellow; z-index: 10; position: absolute">
-    <span id="close" onclick="ByID('popup').style.display='none';">close</span><br>
+<div id="popup" style="display: none; height: 625px; width: 625px; color: green; background: #00000099; z-index: 10; position: absolute">
+    <span id="close" onclick="ByID('popup').style.display='none'; document.addEventListener('keydown', keyPush);">close</span><br>
     You have a new high score!
 <!--    todo put add container here-->
 </div>
@@ -90,6 +90,7 @@
 
     function popup() {
         ByID('popup').style.display = 'block';
+        document.removeEventListener("keydown", keyPush);
     }
 
     function reset_score() {
