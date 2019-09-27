@@ -88,7 +88,7 @@ $title = $tool['title'];
                     </a>
 
                     <!-- Twitter -->
-                    <a href="https://twitter.com/share?url=<?php echo($full_url); ?>&amp;text=<?php echo($title); ?>&amp;hashtags=devtools"
+                    <a href="https://twitter.com/share?url=<?php echo($full_url); ?>&amp;text=<?php echo($tool['name']); ?>&amp;hashtags=devtools"
                        target="_blank">
                         <img src="img/share_icon/twitter.png" alt="Twitter"/>
                     </a>
