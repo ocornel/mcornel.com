@@ -29,14 +29,14 @@
                 <div class="form-group buttons_div">
                     <div class="col-md-12">
                         <ul class="nav_ul ul_buttons">
-                            <li><a id="load_url" href="html-beautifier.php#">Load&nbsp;Url</a></li>
-                            <li><a id="browse" href="html-beautifier.php#">Browse</a></li>
-                            <li><a id="beautify_html" href="html-beautifier.php#">Format&nbsp;html</a></li>
-                            <li><a id="minify_html" href="html-beautifier.php#">Minify&nbsp;html</a></li>
-                            <li><a id="options" href="html-beautifier.php#">Options</a></li>
-                            <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="html-beautifier.php#">Editor&nbsp;Options</a></li>
-                            <li><a id="download" href="html-beautifier.php#">Download</a></li>
-                            <li><a id="clear" href="html-beautifier.php#">Clear</a></li>
+                            <li><a id="load_url" href="html-formater.php#">Load&nbsp;Url</a></li>
+                            <li><a id="browse" href="html-formater.php#">Browse</a></li>
+                            <li><a id="beautify_html" href="html-formater.php#">Format&nbsp;html</a></li>
+                            <li><a id="minify_html" href="html-formater.php#">Minify&nbsp;html</a></li>
+                            <li><a id="options" href="html-formater.php#">Options</a></li>
+                            <li><a id="editor_options" data-toggle="modal" data-target="#editor_options_modal" data-backdrop="false" href="html-formater.php#">Editor&nbsp;Options</a></li>
+                            <li><a id="download" href="html-formater.php#">Download</a></li>
+                            <li><a id="clear" href="html-formater.php#">Clear</a></li>
                         </ul>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                         <h4 class="modal-title" id="myModalLabel">Format Options</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="form-horizontal" action="html-beautifier.php#" method="post">
+                        <form class="form-horizontal" action="html-formater.php#" method="post">
                             <fieldset>
 
                                 <!-- Select Basic -->

@@ -62,8 +62,13 @@ $(document).ready(function(e) {
 			$("#html").parents("div.form-group").removeClass("has-error");
 		}
 		$("div.data_out").show();
-		out = minify(data, getOptions());
-		
+		try{
+			out = minify(data, getOptions());
+		}catch(e)
+		{
+			out = "Error parsing that data!";
+			console.log(e);
+		}
 		byId('out').value = out;
 		$("html, body").animate({
 			scrollTop: $("div.data_out").offset().top

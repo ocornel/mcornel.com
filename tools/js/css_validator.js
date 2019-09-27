@@ -78,9 +78,11 @@ $(document).ready(function(e) {
 			{
 				data += "<tr>";
 				if(messages[i].type == 'error'){
-					data += "<td><img title='error' alt='error' src='/img/error.png' /></td>";
+					data += "<td><img title='error' alt='error' src='img/error.png' height='20px' /></td>";
+					// data += "<td><i class='fa fa-stop-circle' style='color: red'></i></td>";
 				} else if(messages[i].type == 'warning'){
-					data += "<td><img title='warning' alt='warning' src='/img/warn.png' /></td>";
+					data += "<td><img title='warning' alt='warning' src='img/warn.png' height='20px'/></td>";
+					// data += "<td><i class='fa fa-exclamation-triangle' style='color: orange'></i></td>";
 				}
 				data += "<td>" + ((typeof messages[i].line == "number") ? messages[i].line : "(rollup)") + "</td>";
 				data += "<td>" + ((typeof messages[i].col == "number") ? messages[i].col : "(rollup)") + "</td>";

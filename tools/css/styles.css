@@ -8,6 +8,7 @@
     --mc-grey: #F2F2F2;
     --mc-darkgrey: #a2a2a2;
     --mc-black: #272c33;
+    --mc-container-fluid-side-margins: 5vw;
 }
 
 * {
@@ -193,5 +194,15 @@ ul.ul_buttons li a {
 }
 
 .btn {
-border-radius: unset;
+    border-radius: unset;
+}
+
+.nav-content {
+    background: white;
+    width: 60px;
+    margin: -10px var(--mc-container-fluid-side-margins);
+}
+
+div.header_nav {
+    right: var(--mc-container-fluid-side-margins);
 }

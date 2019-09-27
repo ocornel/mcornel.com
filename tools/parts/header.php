@@ -3,7 +3,7 @@
         <div class="row" style="background: var(--mc-blue);">
             <div class="col-md-12">
                 <div class="nav_bar">
-                    <div class="" style="background: white; width: 60px; margin-top: -10px; margin-bottom: -10px">
+                    <div class="nav-content" style="">
                         <div class="header_img">
                             <a href="../" style="display:block;width:200px;height:60px;"></a>
                         </div>
@@ -76,6 +76,8 @@
         </div>
     </div>
 </div>
+
+<div style="padding-right: var(--mc-container-fluid-side-margins); padding-left: var(--mc-container-fluid-side-margins);">
 
 <div class="container-fluid">
     <div class="row">
