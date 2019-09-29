@@ -11,6 +11,7 @@
                     <div class="header_nav">
                         <ul class="nav_ul">
                             <li><a href="../tools"><i class="fa fa-home"></i> Home</a></li>
+                            <li><a href="../tools/samples.php"><i class="fa fa-code" title="Get sample data to test tools."></i> Samples</a></li>
                             <li><a href="#all_tools"><i class="fa fa-cog"></i> All Tools</a></li>
                             <li class="dropdown">
                                 <span class="dropbtn"><i class="fa fa-link"></i> Related
