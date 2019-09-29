@@ -1,0 +1,791 @@
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt install apache2
+sudo ufw app list
+sudo ufw allow in "Apache Full"
+sudo apt install curl
+curl http://mcornel.com
+sudo apt install mysql-server
+sudo mysql_secure_installation
+sudo mysql
+sudo apt install php libapache2-mod-php php-mysql
+sudo nano /etc/apache2/mods-enabled/dir.conf 
+sudo systemctl restart apache2
+sudo systemctl status apache2
+sudo apt install php-cli
+sudo nano /var/www/html/info.php
+sudo rm /var/www/html/info.php 
+sudo apt install phpmyadmin php-mbstring php-gettext
+sudo phpenmod mbstring
+sudo systemctl restart apache2
+sudo nano /var/www/html/index.html
+sudo rm /var/www/html/index.php 
+sudo nano /var/www/html/index.php 
+cd /var/www/html/
+ls
+git clone /home/martin/Desktop/Work/weBuild/css
+/home/martin/Desktop/Work/weBuild/fonts
+/home/martin/Desktop/Work/weBuild/images
+/home/martin/Desktop/Work/weBuild/js
+/home/martin/Desktop/Work/weBuild/.idea
+git clone https://gitlab.com/mcornel/mcornel.com.git
+cd
+git clone https://gitlab.com/mcornel/mcornel.com.git
+ls
+pwd
+cd /var/www/
+git clone https://gitlab.com/mcornel/mcornel.com.git
+sudo git clone https://gitlab.com/mcornel/mcornel.com.git
+ls
+sudo chown -R $USER:$USER mcornel.com
+sudo chmod -R 755 /var/www
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/mconrel.com.conf
+sudo nano /etc/apache2/sites-available/mconrel.com.conf 
+sudo a2ensite mcornel.com.conf
+sudo mv /etc/apache2/sites-available/mconrel.com.conf /etc/apache2/sites-available/mcornel.com.conf
+sudo a2ensite mcornel.com.conf
+sudo a2dissite 000-default.conf 
+sudo systemctl reload apache2
+sudo systemctl restart apache2
+sudo cp /etc/apache2/sites-available/mcornel.com.conf /etc/apache2/sites-available/profile.mcornel.com.conf
+sudo nano /etc/apache2/sites-available/profile.mcornel.com.conf 
+sudo a2ensite profile.mcornel.com.conf 
+sudo systemctl restart apache2
+sudo nano /etc/apache2/sites-available/profile.mcornel.com.conf 
+la
+ls
+mkdir profile.mcornel.com
+sudo mkdir profile.mcornel.com
+cd profile.mcornel.com/
+sudo nano index.html
+fg
+ls
+sudo nano index.php
+sudo a2ensite profile.mcornel.com.conf 
+sudo systemctl restart apache2
+ls
+cd ..
+sudo rm -R profile.mcornel.com
+ls
+git clone https://gitlab.com/mcornel/profile.mcornel.com.git
+sudo git clone https://gitlab.com/mcornel/profile.mcornel.com.git
+ls
+logout
+sudo systemctl restart apache2
+sudo a2ensite profile.mcornel.com.conf 
+logout
+sudo apt update
+apt list --upgradable
+sudo apt upgrade
+df -h
+cd /var/www/
+ls
+mkdir blog.mcornel.com
+sudo nano blog.mcornel.com/index.html
+ls
+mkdir blog.mcornel.com
+sudo mkdir blog.mcornel.com
+cd blog.mcornel.com
+ls
+sudo nano index.html
+sudo nano index.php
+ls
+sudo cp /etc/apache2/sites-available/mcornel.com.conf /etc/apache2/sites-available/blog.mcornel.com.conf
+sudo nano /etc/apache2/sites-available/blog.mcornel.com.conf 
+sudo a2ensite blog.mcornel.com.conf 
+sudo systemctl reload apache2
+sudo nano /etc/apache2/sites-enabled/profile.mcornel.com.conf 
+sudo nano /etc/apache2/sites-enabled/blog.mcornel.com.conf 
+sudo a2ensite blog.mcornel.com.conf 
+sudo systemctl reload apache2
+logout
+mysql -u root -p
+sudo apt update
+sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+sudo systemctl restart apache2
+sudo nano /etc/apache2/sites-available/wordpress.conf
+sudo a2enmod rewrite
+systemctl restart apache2
+sudo apache2ctl configtest
+cd /tmp
+curl -O https://wordpress.org/latest.tar.gz
+tar xzvf latest.tar.gz 
+ls
+touch /tmp/wordpress/.htaccess
+cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
+mkdir /tmp/wordpress/wp-content/upgrade
+sudo cp -a /tmp/wordpress/. /var/www/wordpress
+sudo chown -R www-data :www-data /var/www/wordpress
+sudo chown -R www-data:www-data /var/www/wordpress
+sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
+sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+curl -s https://api.wordpress.org/secret-key/1.1/salt/
+sudo nano /var/www/wordpress/wp-config.php
+cd /var/www/
+ls
+cd blog.mcornel.com/
+ls
+rm index.php 
+ls
+sudo rm index.php 
+ls
+cd ../wordpress/
+cs ..
+cd ..
+ls
+sudo mv wordpress/. blog.mcornel.com/
+sudo cp wordpress/. blog.mcornel.com/
+sudo cp -R wordpress/. blog.mcornel.com/
+cd blog.mcornel.com/
+ls
+sudo nano wp-config.php 
+ls
+rm -R .
+rm -R *
+y
+yls
+ls
+sudo rm *
+sudo rm -R *
+ls
+sudo nano index.php
+logout
+cd /var/www/
+ls
+sudo cp /etc/apache2/sites-available/profile.mcornel.com.conf /etc/apache2/sites-available/nnak.mcornel.com.conf
+sudo nano /etc/apache2/sites-available/nnak.mcornel.com.conf 
+sudo a2ensite nnak.mcornel.com.conf 
+sudo systemctl reload apache2
+ls
+mkdir nnak.mcornel.com
+sudo mkdir nnak.mcornel.com
+cd nnak.mcornel.com/
+ls
+touch index.php
+cd ..
+touch nnak.mcornel.com/index.php
+sudo touch nnak.mcornel.com/index.php
+nano nnak.mcornel.com/index.php 
+cd nnak.mcornel.com/
+ls
+sudo nano index.php 
+sudo nano /etc/apache2/sites-available/nnak.mcornel.com.conf 
+ls
+cat index.php 
+sudo cp /etc/apache2/sites-available/profile.mcornel.com.conf /etc/apache2/sites-available/cv.mcornel.com.conf
+sudo nano /etc/apache2/sites-available/cv.mcornel.com.conf 
+cd /var/www/
+ls
+sudo mkdir cv.mcornel.com
+sudo a2ensite cv.mcornel.com.conf 
+sudo systemctl reload apache2
+cd cv.mcornel.com/
+ls
+sudo nano index.php
+cd ..
+sudo rm -R cv.mcornel.com
+ls
+git@gitlab.com:mcornel/cv.mcornel.com.git
+git clone git@gitlab.com:mcornel/cv.mcornel.com.git
+sudo git clone git@gitlab.com:mcornel/cv.mcornel.com.git
+ls
+sudo git clone https://gitlab.com/mcornel/cv.mcornel.com.git
+ls
+cd cv.mcornel.com/
+ls
+git status
+git pull
+sudo git pull
+git status
+ls
+logout
+cd /var/www/cv.mcornel.com/
+git status
+git pull
+sudo git pull
+git status
+logout
+cd /var/www/
+ls
+cd cv.mcornel.com/
+git status
+git pull
+sudo git pull
+logout
+cd /var/www/mcornel.com/
+ls
+git status
+git stash
+git status
+git pull origin master 
+git status
+logout
+ls
+cd /var/www/mcornel.com/
+git pull origin master 
+git status
+git pull
+git status
+logout
+ls
+pwd
+cd mcornel.com/
+ls
+cd /var/www/mcornel.com/
+ls
+mkdir themes
+cd themes/
+pwd
+ls
+unzip theme-admin.zip admin1
+sudo apt install unzip
+unzip theme-admin.zip admin1
+unzip theme-admin.zip -d admin1
+cp theme-admin/* .
+ls
+cd admin1/
+ls
+mv theme-admin/* .
+ls
+rm theme-admin
+rm -r theme-admin
+ls
+cd ..
+touch index.html
+ls
+unzip admin-10.zip .
+unzip admin-10.zip -d .
+ls
+mv theme-10 admin-10
+ls
+logout
+sudo nano /etc/apache2/sites-available/cv.mcornel.com.conf 
+sudo nano /etc/apache2/sites-available/victor.mcornel.com
+sudo systemctl reload apache2
+cd /etc/apache2/sites-enabled/
+ls
+sudo rm /etc/apache2/sites-available/victor.mcornel.com
+cd ..
+ls
+cd sites-available/
+ls
+sudo nano victor.mcornel.com.conf 
+sudo systemctl reload apache2
+cd /var/www/
+ls
+cd mcornel.com/
+ls
+git status
+git add .
+git commit -m "Themes"
+git status
+git pull origin master 
+git status
+git push
+ls
+logout
+php -d memory_limit=-1 /usr/bin/composer update --verbose --profile
+cd /var/www/takegas_web/
+php -d memory_limit=-1 /usr/bin/composer update --verbose --profile
+php -d memory_limit=-1 composer.phar dump-autoload --no-dev
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+sudo swapon --show
+free -h
+sudo fallocate -l 1G /swapfile
+ls -lh /swapfile
+sudo chmod 600 /swapfile
+ls -lh /swapfile
+sudo mkswap /swapfile 
+sudo swapon /swapfile
+sudo swapon --show
+free -h
+composer update
+logout
+cd /var/www/takegas_web
+cd ..
+ls
+cd mcornel.com/
+ls
+git status
+git pull
+git status
+sudo apt update
+apt list --upgradable
+sudo apt upgrade
+apt list --upgradable
+du
+du -h
+du -h /
+df /
+df -h
+logout
+cd /var/www/
+ls
+cd mcornel.com/
+ls
+mkdir vid
+cd vid
+cat ~/.bash_history 
+pwd
+cd ..
+ls -a
+ls -la
+chmod 777 vid/*
+logout
+cd /etc/apache2/sites-available/
+ls
+cat victor.mcornel.com.conf 
+logout
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt update
+    4  sudo apt install apache2
+    5  sudo ufw app list
+    6  sudo ufw allow in "Apache Full"
+    7  sudo apt install curl
+    8  curl http://mcornel.com
+    9  sudo apt install mysql-server
+   10  sudo mysql_secure_installation
+   11  sudo mysql
+   12  sudo apt install php libapache2-mod-php php-mysql
+   13  sudo nano /etc/apache2/mods-enabled/dir.conf 
+   14  sudo systemctl restart apache2
+   15  sudo systemctl status apache2
+   16  sudo apt install php-cli
+   17  sudo nano /var/www/html/info.php
+   18  sudo rm /var/www/html/info.php 
+   19  sudo apt install phpmyadmin php-mbstring php-gettext
+   20  sudo phpenmod mbstring
+   21  sudo systemctl restart apache2
+   22  sudo nano /var/www/html/index.html
+   23  sudo rm /var/www/html/index.php 
+   24  sudo nano /var/www/html/index.php 
+   25  cd /var/www/html/
+   26  ls
+   27  git clone /home/martin/Desktop/Work/weBuild/css
+   28  /home/martin/Desktop/Work/weBuild/fonts
+   29  /home/martin/Desktop/Work/weBuild/images
+   30  /home/martin/Desktop/Work/weBuild/js
+   31  /home/martin/Desktop/Work/weBuild/.idea
+   32  git clone https://gitlab.com/mcornel/mcornel.com.git
+   33  cd
+   34  git clone https://gitlab.com/mcornel/mcornel.com.git
+   35  ls
+   36  pwd
+   37  cd /var/www/
+   38  git clone https://gitlab.com/mcornel/mcornel.com.git
+   39  sudo git clone https://gitlab.com/mcornel/mcornel.com.git
+   40  ls
+   41  sudo chown -R $USER:$USER mcornel.com
+   42  sudo chmod -R 755 /var/www
+   43  sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/mconrel.com.conf
+   44  sudo nano /etc/apache2/sites-available/mconrel.com.conf 
+   45  sudo a2ensite mcornel.com.conf
+   46  sudo mv /etc/apache2/sites-available/mconrel.com.conf /etc/apache2/sites-available/mcornel.com.conf
+   47  sudo a2ensite mcornel.com.conf
+   48  sudo a2dissite 000-default.conf 
+   49  sudo systemctl reload apache2
+   50  sudo systemctl restart apache2
+   51  sudo cp /etc/apache2/sites-available/mcornel.com.conf /etc/apache2/sites-available/profile.mcornel.com.conf
+   52  sudo nano /etc/apache2/sites-available/profile.mcornel.com.conf 
+   53  sudo a2ensite profile.mcornel.com.conf 
+   54  sudo systemctl restart apache2
+   55  sudo nano /etc/apache2/sites-available/profile.mcornel.com.conf 
+   56  la
+   57  ls
+   58  mkdir profile.mcornel.com
+   59  sudo mkdir profile.mcornel.com
+   60  cd profile.mcornel.com/
+   61  sudo nano index.html
+   62  fg
+   63  ls
+   64  sudo nano index.php
+   65  sudo a2ensite profile.mcornel.com.conf 
+   66  sudo systemctl restart apache2
+   67  ls
+   68  cd ..
+   69  sudo rm -R profile.mcornel.com
+   70  ls
+   71  git clone https://gitlab.com/mcornel/profile.mcornel.com.git
+   72  sudo git clone https://gitlab.com/mcornel/profile.mcornel.com.git
+   73  ls
+   74  logout
+   75  sudo systemctl restart apache2
+   76  sudo a2ensite profile.mcornel.com.conf 
+   77  logout
+   78  sudo apt update
+   79  apt list --upgradable
+   80  sudo apt upgrade
+   81  df -h
+   82  cd /var/www/
+   83  ls
+   84  mkdir blog.mcornel.com
+   85  sudo nano blog.mcornel.com/index.html
+   86  ls
+   87  mkdir blog.mcornel.com
+   88  sudo mkdir blog.mcornel.com
+   89  cd blog.mcornel.com
+   90  ls
+   91  sudo nano index.html
+   92  sudo nano index.php
+   93  ls
+   94  sudo cp /etc/apache2/sites-available/mcornel.com.conf /etc/apache2/sites-available/blog.mcornel.com.conf
+   95  sudo nano /etc/apache2/sites-available/blog.mcornel.com.conf 
+   96  sudo a2ensite blog.mcornel.com.conf 
+   97  sudo systemctl reload apache2
+   98  sudo nano /etc/apache2/sites-enabled/profile.mcornel.com.conf 
+   99  sudo nano /etc/apache2/sites-enabled/blog.mcornel.com.conf 
+  100  sudo a2ensite blog.mcornel.com.conf 
+  101  sudo systemctl reload apache2
+  102  logout
+  103  mysql -u root -p
+  104  sudo apt update
+  105  sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+  106  sudo systemctl restart apache2
+  107  sudo nano /etc/apache2/sites-available/wordpress.conf
+  108  sudo a2enmod rewrite
+  109  systemctl restart apache2
+  110  sudo apache2ctl configtest
+  111  cd /tmp
+  112  curl -O https://wordpress.org/latest.tar.gz
+  113  tar xzvf latest.tar.gz 
+  114  ls
+  115  touch /tmp/wordpress/.htaccess
+  116  cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php
+  117  mkdir /tmp/wordpress/wp-content/upgrade
+  118  sudo cp -a /tmp/wordpress/. /var/www/wordpress
+  119  sudo chown -R www-data :www-data /var/www/wordpress
+  120  sudo chown -R www-data:www-data /var/www/wordpress
+  121  sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
+  122  sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+  123  curl -s https://api.wordpress.org/secret-key/1.1/salt/
+  124  sudo nano /var/www/wordpress/wp-config.php
+  125  cd /var/www/
+  126  ls
+  127  cd blog.mcornel.com/
+  128  ls
+  129  rm index.php 
+  130  ls
+  131  sudo rm index.php 
+  132  ls
+  133  cd ../wordpress/
+  134  cs ..
+  135  cd ..
+  136  ls
+  137  sudo mv wordpress/. blog.mcornel.com/
+  138  sudo cp wordpress/. blog.mcornel.com/
+  139  sudo cp -R wordpress/. blog.mcornel.com/
+  140  cd blog.mcornel.com/
+  141  ls
+  142  sudo nano wp-config.php 
+  143  ls
+  144  rm -R .
+  145  rm -R *
+  146  y
+  147  yls
+  148  ls
+  149  sudo rm *
+  150  sudo rm -R *
+  151  ls
+  152  sudo nano index.php
+  153  logout
+  154  cd /var/www/
+  155  ls
+  156  sudo cp /etc/apache2/sites-available/profile.mcornel.com.conf /etc/apache2/sites-available/nnak.mcornel.com.conf
+  157  sudo nano /etc/apache2/sites-available/nnak.mcornel.com.conf 
+  158  sudo a2ensite nnak.mcornel.com.conf 
+  159  sudo systemctl reload apache2
+  160  ls
+  161  mkdir nnak.mcornel.com
+  162  sudo mkdir nnak.mcornel.com
+  163  cd nnak.mcornel.com/
+  164  ls
+  165  touch index.php
+  166  cd ..
+  167  touch nnak.mcornel.com/index.php
+  168  sudo touch nnak.mcornel.com/index.php
+  169  nano nnak.mcornel.com/index.php 
+  170  cd nnak.mcornel.com/
+  171  ls
+  172  sudo nano index.php 
+  173  sudo nano /etc/apache2/sites-available/nnak.mcornel.com.conf 
+  174  ls
+  175  cat index.php 
+  176  sudo cp /etc/apache2/sites-available/profile.mcornel.com.conf /etc/apache2/sites-available/cv.mcornel.com.conf
+  177  sudo nano /etc/apache2/sites-available/cv.mcornel.com.conf 
+  178  cd /var/www/
+  179  ls
+  180  sudo mkdir cv.mcornel.com
+  181  sudo a2ensite cv.mcornel.com.conf 
+  182  sudo systemctl reload apache2
+  183  cd cv.mcornel.com/
+  184  ls
+  185  sudo nano index.php
+  186  cd ..
+  187  sudo rm -R cv.mcornel.com
+  188  ls
+  189  git@gitlab.com:mcornel/cv.mcornel.com.git
+  190  git clone git@gitlab.com:mcornel/cv.mcornel.com.git
+  191  sudo git clone git@gitlab.com:mcornel/cv.mcornel.com.git
+  192  ls
+  193  sudo git clone https://gitlab.com/mcornel/cv.mcornel.com.git
+  194  ls
+  195  cd cv.mcornel.com/
+  196  ls
+  197  git status
+  198  git pull
+  199  sudo git pull
+  200  git status
+  201  ls
+  202  logout
+  203  cd /var/www/cv.mcornel.com/
+  204  git status
+  205  git pull
+  206  sudo git pull
+  207  git status
+  208  logout
+  209  cd /var/www/
+  210  ls
+  211  cd cv.mcornel.com/
+  212  git status
+  213  git pull
+  214  sudo git pull
+  215  logout
+  216  cd /var/www/mcornel.com/
+  217  ls
+  218  git status
+  219  git stash
+  220  git status
+  221  git pull origin master 
+  222  git status
+  223  logout
+  224  ls
+  225  cd /var/www/mcornel.com/
+  226  git pull origin master 
+  227  git status
+  228  git pull
+  229  git status
+  230  logout
+  231  ls
+  232  pwd
+  233  cd mcornel.com/
+  234  ls
+  235  cd /var/www/mcornel.com/
+  236  ls
+  237  mkdir themes
+  238  cd themes/
+  239  pwd
+  240  ls
+  241  unzip theme-admin.zip admin1
+  242  sudo apt install unzip
+  243  unzip theme-admin.zip admin1
+  244  unzip theme-admin.zip -d admin1
+  245  cp theme-admin/* .
+  246  ls
+  247  cd admin1/
+  248  ls
+  249  mv theme-admin/* .
+  250  ls
+  251  rm theme-admin
+  252  rm -r theme-admin
+  253  ls
+  254  cd ..
+  255  touch index.html
+  256  ls
+  257  unzip admin-10.zip .
+  258  unzip admin-10.zip -d .
+  259  ls
+  260  mv theme-10 admin-10
+  261  ls
+  262  logout
+  263  sudo nano /etc/apache2/sites-available/cv.mcornel.com.conf 
+  264  sudo nano /etc/apache2/sites-available/victor.mcornel.com
+  265  sudo systemctl reload apache2
+  266  cd /etc/apache2/sites-enabled/
+  267  ls
+  268  sudo rm /etc/apache2/sites-available/victor.mcornel.com
+  269  cd ..
+  270  ls
+  271  cd sites-available/
+  272  ls
+  273  sudo nano victor.mcornel.com.conf 
+  274  sudo systemctl reload apache2
+  275  cd /var/www/
+  276  ls
+  277  cd mcornel.com/
+  278  ls
+  279  git status
+  280  git add .
+  281  git commit -m "Themes"
+  282  git status
+  283  git pull origin master 
+  284  git status
+  285  git push
+  286  ls
+  287  logout
+  288  php -d memory_limit=-1 /usr/bin/composer update --verbose --profile
+  289  cd /var/www/takegas_web/
+  290  php -d memory_limit=-1 /usr/bin/composer update --verbose --profile
+  291  php -d memory_limit=-1 composer.phar dump-autoload --no-dev
+  292  sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+  293  sudo swapon --show
+  294  free -h
+  295  sudo fallocate -l 1G /swapfile
+  296  ls -lh /swapfile
+  297  sudo chmod 600 /swapfile
+  298  ls -lh /swapfile
+  299  sudo mkswap /swapfile 
+  300  sudo swapon /swapfile
+  301  sudo swapon --show
+  302  free -h
+  303  composer update
+  304  logout
+  305  cd /var/www/takegas_web
+  306  cd ..
+  307  ls
+  308  cd mcornel.com/
+  309  ls
+  310  git status
+  311  git pull
+  312  git status
+  313  sudo apt update
+  314  apt list --upgradable
+  315  sudo apt upgrade
+  316  apt list --upgradable
+  317  du
+  318  du -h
+  319  du -h /
+  320  df /
+  321  df -h
+  322  logout
+  323  cd /var/www/
+  324  ls
+  325  cd mcornel.com/
+  326  ls
+  327  mkdir vid
+  328  cd vid
+  329  cat ~/.bash_history 
+  330  pwd
+  331  cd ..
+  332  ls -a
+  333  ls -la
+  334  chmod 777 vid/*
+  335  logout
+  336  cd /etc/apache2/sites-available/
+  337  ls
+  338  cat victor.mcornel.com.conf 
+  339  logout
+  340  cd /var/www/
+  341  ls
+  342  cd mcornel.com/
+  343  ls
+  344  cat ~/.bash_history >> mcornel_bash_history.txt
+  345  cd ..
+  346  ls
+  347  cat takegas_web/public/index.php 
+  348  cat /etc/apache2/sites-available/mcornel.com.conf 
+  349  logout
+  350  sudo apt update
+  351  apt list --upgrade
+  352  apt list --upgradable
+  353  sudo apt upgrade
+  354  sudo apt dist-upgrade
+  355  sudo apt update
+  356  sudo apt dist-upgrade
+  357  ls
+  358  cd mcornel.com/
+  359  ls
+  360  cd /var/
+  361  ls
+  362  ls mail
+  363  cd www/
+  364  ls
+  365  ls html/
+  366  ls
+  367  ls blog.mcornel.com/
+  368  cat blog.mcornel.com/index.php 
+  369  ls nnak.mcornel.com/
+  370  cat nnak.mcornel.com/index.php 
+  371  rm -R nnak.mcornel.com/
+  372  ls
+  373  ls nnak.mcornel.com/
+  374  sudo rm -R nnak.mcornel.com
+  375  ls
+  376  ls cv.mcornel.com/
+  377  ls wordpress/
+  378  sudo ls wordpress/
+  379  ls
+  380  logout
+  381  cd /var/www/mcornel.com/
+  382  git status
+  383  git pull
+  384  git status
+  385  cd sw
+  386  ls
+  387  mv wi-10 win_10
+  388  git pull
+  389  cd ..
+  390  git status
+  391  ls
+  392  ls s
+  393  cd sw
+  394  ls
+  395  git pull
+  396  git status
+  397  logout
+  398  cd /var/www/sw
+  399  cd /var/www/mcornel.com/sw/
+  400  ls
+  401  rm EasyWorship_2009.zip 
+  402  ls
+  403  cd ..
+  404  git status
+  405  git pull
+  406  git status
+  407  cd /var/www/
+  408  ls
+  409  cd cv.mcornel.com/
+  410  git status
+  411  git pull
+  412  ls -al
+  413  sudo git pull
+  414  logout
+  415  ls
+  416  cd mcornel.com/
+  417  ls
+  418  gedit index.html 
+  419  sudo apt install gedit
+  420  logout
+  421  hostnamectl
+  422  logout
+  423  cd /var/www/mcornel.com/
+  424  git pull
+  425  logout
+  426  cd /var/www/mcornel.com/
+  427  git pull
+  428  logout
+  429  cd /var/www/mcornel.com/
+  430  git pull
+  431  ls
+  432  du
+  433  du -h
+  434  ls vid/
+  435  rm -r vid
+  436  ls
+  437  ls sw
+  438  rm -r sw/
+  439  git status
+  440  git pull
+  441  logout
+  442  cd /var/www/mcornel.com/
+  443  git pull
+  444  cd ..
+  445  ls
+  446  logout
+  447  cd /var/www/mcornel.com/
+  448  git pull
+  449  logout
+  450  cd /var/www/mcornel.com/
+  451  git status
+  452  history >> mcornel_bash_history.txt 
