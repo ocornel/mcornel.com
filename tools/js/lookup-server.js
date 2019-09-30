@@ -70,7 +70,7 @@ $(document).ready(function (e) {
                     }, 500);
 
                 }
-                $("#term").val("");
+                // $("#term").val("");
                 $("#term").parents("div.form-group").removeClass("has-error");
 
             },
