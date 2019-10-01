@@ -130,7 +130,8 @@ $title = $tool['title'];
                 foreach ($tools as $tool) {
                     $warning = "";
                     if ($tool['complete'] != 1) {
-                        $warning = " <i class='fa fa-exclamation-triangle text-warning' title='Still in development.'></i> ";
+                        continue;
+//                        $warning = " <i class='fa fa-exclamation-triangle text-warning' title='Still in development.'></i> ";
                     }
                     echo("<li><a href=\"" . $tool['url'] . "\">" . $tool['name'] . $warning . "</a></li>");
                 }

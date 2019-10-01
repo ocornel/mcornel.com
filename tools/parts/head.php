@@ -9,7 +9,7 @@
 </script>
 
 <!--adds-->
-<script data-ad-client="ca-pub-8078706526441664" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--<script data-ad-client="ca-pub-8078706526441664" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 
 
 <?php
