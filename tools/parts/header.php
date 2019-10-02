@@ -85,7 +85,7 @@
         <div class="col-md-12">
             <!--            todo put add container here -->
 <script src="//pushails.com/ntfc.php?p=2853388" data-cfasync="false" async></script>
-           
+           <script type="text/javascript" src="//deloplen.com/apu.php?zoneid=2852120" async data-cfasync="false"></script>
         </div>
     </div>
 </div>
