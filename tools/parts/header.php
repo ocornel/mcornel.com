@@ -84,7 +84,7 @@
     <div class="row">
         <div class="col-md-12">
             <!--            todo put add container here -->
-
+<script type="text/javascript" src="//deloplen.com/apu.php?zoneid=2852120" async data-cfasync="false"></script>
             <?php
 
 class __AntiAdBlock_2852121
