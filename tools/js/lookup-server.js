@@ -54,11 +54,13 @@ $(document).ready(function (e) {
                 "term": term,
             },
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 json_data = JSON.parse(data);
                 output = json_data.output;
+                output = output.replace("\n", "<br/>");
+                console.log(output);
                 if (output !== "") {
-                    $("div.info_out").html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>'+output).addClass("text-success");
+                    $("div.info_out").html('<pre class="glyphicon glyphicon-ok" aria-hidden="true"></pre>'+output).addClass("text-success");
                     $("html, body").animate({
                         scrollTop: $("div.info_out").offset().top - 10
                     }, 500);
