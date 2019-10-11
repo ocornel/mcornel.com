@@ -12,7 +12,7 @@ $(document).ready(function(e) {
 		
 		$.ajax({
 			type	: "POST",
-			url		: "/wc.php",
+			url: "string_stats.php",
 			data	: {"txt" : txt},
 			success : function(data)
 			{
