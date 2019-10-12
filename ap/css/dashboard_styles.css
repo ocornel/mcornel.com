@@ -1,0 +1,26 @@
+:root {
+    --nav-height: 65px;
+}
+
+.navbar {
+    height: var(--nav-height);
+}
+
+.fill-page {
+    min-height: calc(100vh - var(--nav-height));
+}
+.side-nav {
+    padding: 10px;
+}
+.side-nav li {
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.page-content {
+    margin: 20px;
+    background-color: var(--mc-grey);
+    padding: 20px;
+}

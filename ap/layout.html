@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../tools/css/styles.css">
+    <link rel="stylesheet" href="css/dashboard_styles.css">
+</head>
+<body>
+<div class="navbar bg-secondary">
+    <div class="navbar-brand">Logo here</div>
+    <div class="nav-fill">
+        <ul class="nav">
+            <li class="nav-item">search</li>
+            <li class="nav-item">User</li>
+        </ul>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row fill-page">
+        <div class="col-md-2 bg-light side-nav">
+            <ul>
+                <li data-value="dashboard" class="page-loader">Dashboard</li>
+                <li  data-value="samples" class="page-loader">Data samples</li>
+                <li  data-value="tool-groups" class="page-loader">Tool groups</li>
+                <li  data-value="tools" class="page-loader">Tools</li>
+                <li  data-value="lookups" class="page-loader">Lookups</li>
+                <li  data-value="settings" class="page-loader">Settings</li>
+            </ul>
+        </div>
+        <div class="col-md">
+            <div class="page-content" id="page-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="js/dashboard_scripts.js"></script>
+</body>
+</html>
