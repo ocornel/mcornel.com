@@ -17,10 +17,16 @@
     margin-top: 5px;
     margin-bottom: 5px;
     cursor: pointer;
+    margin-left: -50px;
+    padding-left: 20px;
 }
 
 .page-content {
     margin: 20px;
     background-color: var(--mc-grey);
     padding: 20px;
+}
+
+.active-page {
+    background-color: var(--mc-darkgrey);
 }
