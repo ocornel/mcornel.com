@@ -22,7 +22,7 @@
     <div class="row fill-page">
         <div class="col-md-2 bg-light side-nav">
             <ul>
-                <li data-value="dashboard" class="page-loader">Dashboard</li>
+                <li data-value="dashboard" class="page-loader" id="first-page">Dashboard</li>
                 <li  data-value="samples" class="page-loader">Data samples</li>
                 <li  data-value="tool-groups" class="page-loader">Tool groups</li>
                 <li  data-value="tools" class="page-loader">Tools</li>
@@ -39,10 +39,12 @@
 </div>
 
 
-
 <script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/popper.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="js/dashboard_scripts.js"></script>
+<script>
+    document.getElementById("first-page").click();
+</script>
 </body>
 </html>
