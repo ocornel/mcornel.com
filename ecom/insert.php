@@ -20,7 +20,8 @@
 </html>
 
 <?php
-$connection = new mysqli("localhost", "angular_user", "angular_password", "angular_practice") or die(mysqli_error());$statement = $connection->prepare("insert into products values(null ,?,?,?,?,CURRENT_TIMESTAMP , null )");                                                    # prepare the connection to receive 4 values
-$statement->bind_param('ssds', $_POST["name"], $_POST["description"], $_POST["price"], $_POST["photo_url"]);    # the 4 parameters will be type string, string, double, string and will map to these variables whatsoever orders they are made
+$connection = new mysqli("localhost", "angular_user", "angular_password", "angular_practice") or die(mysqli_error());
+$statement = $connection->prepare("insert into products values(null ,?,?,?,?,CURRENT_TIMESTAMP , null )");
+$statement->bind_param('ssss', $_POST["mobile"], $_POST["name"], $_POST["password"], $_POST["address"]);
 $statement->execute();
 ?>
