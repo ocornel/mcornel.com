@@ -8,5 +8,5 @@ function getAll($table=null) {
     while ($row=$result->fetch_assoc()) {
         array_push($rows, $row);
     }
-    return(json_encode($rows));
+    return($rows);
 }
