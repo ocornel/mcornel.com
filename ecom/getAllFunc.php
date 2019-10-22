@@ -2,7 +2,6 @@
 function getAll($table=null) {
     $connection = $GLOBALS['connection'];
     $statement = $connection->prepare("select * from  $table");                                                    # prepare the connection to receive 4 values
-//$statement->bind_param('s', $_GET['table']);
     $statement->execute();
     $result = $statement->get_result();
     $rows = [];
