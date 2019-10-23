@@ -99,10 +99,10 @@ $title = $tool['title'];
                     </a>
 
                     <!-- Yummly -->
-                    <a href="http://www.yummly.com/urb/verify?url=<?php echo($full_url); ?>&amp;title=<?php echo($title); ?>"
-                       target="_blank">
-                        <img src="img/share_icon/yummly.png" alt="Yummly"/>
-                    </a>
+<!--                    <a href="http://www.yummly.com/urb/verify?url=--><?php //echo($full_url); ?><!--&amp;title=--><?php //echo($title); ?><!--"-->
+<!--                       target="_blank">-->
+<!--                        <img src="img/share_icon/yummly.png" alt="Yummly"/>-->
+<!--                    </a>-->
 
                 </div>
                 <br>
