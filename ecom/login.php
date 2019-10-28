@@ -5,8 +5,9 @@ $check->bind_param('ss', $_POST["mobile"], $_POST["password"]);
 $check->execute();
 $check_results=$check->get_result();
 if($check_results->num_rows == 0) {
-    echo 0;
+    echo json_encode(0);
 }
 else {
-    echo 1;
+    $user = $check_results->fetch_assoc();
+    echo json_encode($user);
 }
