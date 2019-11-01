@@ -2,5 +2,5 @@
 include("ecom_connection.php");
 $table = $_GET['table'];
 $id = $_GET['id'];
-include('getOneFunc.php');
+include('callableFunctions.php');
 echo(json_encode(getOne($table, $id)));

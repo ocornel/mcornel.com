@@ -1,6 +1,6 @@
 <?php
 include("ecom_connection.php");
-include('getOneFunc.php');
+include('callableFunctions.php');
 $product_id = $_POST["product_id"];
 $user_id = $_POST["user_id"];
 

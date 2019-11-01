@@ -1,6 +1,6 @@
 <?php
 include("ecom_connection.php");
-include('getOneFunc.php');
+include('callableFunctions.php');
 $user_id = $_GET["user_id"];
 
 $user = getOne('users', $user_id);

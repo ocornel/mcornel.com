@@ -1,7 +1,6 @@
 <?php
 include('ecom_connection.php');
-include('getAllFunc.php');
-include('getCategoryProductsFunc.php');
+include('callableFunctions.php');
 
 $categories = getAll('categories');
 $result = [];
