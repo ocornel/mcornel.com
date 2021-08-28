@@ -29,7 +29,7 @@ $(function () {
         dl   = $('.color-option .dl li'),
         // Typed Plugin
         typed = new Typed('.type', {
-            strings: ["Web Systems Developer.", "Web Designer.", "Web Templates", "Mobile App Designer.",  "Mobile App enthusiast.", "IT Consultant."], /* Here Type Your Title */
+            strings: ["Software Engineer (Full stack).", "Web Systems Developer.", "Data Analyst (Databases and Dashboards).", "Android App Developer.", "IT Consultant."], /* Here Type Your Title */
             typeSpeed: 100,
             loop: true,
             backDelay: 1200,
