@@ -2,7 +2,7 @@ body {
   color: #252525; }
 
 .site-btn {
-  background: #3333ff; }
+  background: #55aea1; }
   .site-btn.gray-btn {
     color: #252525; }
     .site-btn.gray-btn:hover, .site-btn.gray-btn.hover {
@@ -17,33 +17,33 @@ body {
     -webkit-box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2);
             box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2); }
   .site-btn:active, .site-btn.active {
-    background: #3333ff;
+    background: #55aea1;
     -webkit-box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2);
             box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2); }
 
 .point:after {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .main-menu ul li a:hover {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .colored-link:hover, .colored-link:active, .colored-link.hover, .colored-link.active {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .mixitup-control-active {
-  color: #3333ff; }
+  color: #55aea1; }
 
 a.fonts-icons:hover, a.fonts-icons.hover {
-  color: #3333ff; }
+  color: #55aea1; }
 
 a.fonts-icons:active, a.fonts-icons.active {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .portfolio-box:hover .portfolio-name, .portfolio-box.hover .portfolio-name, .portfolio-box:active .portfolio-name, .portfolio-box.active .portfolio-name {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .form-wrapper .custom-select-box .custom-select-button:after {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .form-wrapper input[type=text]:hover + .form-validation, .form-wrapper input[type=text]:focus + .form-validation, .form-wrapper input[type=text]:active + .form-validation, .form-wrapper input[type=text].hover + .form-validation, .form-wrapper input[type=text].active + .form-validation,
 .form-wrapper input[type=email]:hover + .form-validation,
@@ -57,13 +57,13 @@ a.fonts-icons:active, a.fonts-icons.active {
   opacity: 1; }
 
 .mobile-btn {
-  color: #3333ff; }
+  color: #55aea1; }
 
 .mob-menu-wrapper {
-  background: #3333ff; }
+  background: #55aea1; }
 
 .wave-bg .zigzag svg:last-child polyline {
-  stroke: #3333ff; }
+  stroke: #55aea1; }
 
 /*------------------------------------------------------------------
 [Table of contents]
@@ -439,7 +439,7 @@ img {
     right: 0;
     bottom: 0;
     border-radius: 2px;
-    border: 2px solid #3333ff;
+    border: 2px solid #55aea1;
     pointer-events: none;
     opacity: 0;
     -webkit-transition: all 0.3s;

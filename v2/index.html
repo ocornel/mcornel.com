@@ -98,14 +98,10 @@
                         <p>
                             <span class="span-title">Social</span>
                             <span class="span-icons">
-                                <a target="_blank" href="https://www.facebook.com/" class="mdi fonts-icons mdi-facebook"></a>
-                                <a target="_blank" href="https://twitter.com/" class="mdi fonts-icons mdi-twitter"></a>
-                                <a target="_blank" href="https://www.instagram.com/" class="mdi fonts-icons mdi-instagram"></a>
-                                <a target="_blank" href="https://www.linkedin.com/" class="mdi fonts-icons mdi-linkedin"></a>
-                                <a target="_blank" href="https://www.behance.net/" class="mdi fonts-icons mdi-behance"></a>
-                                <a target="_blank" href="https://dribbble.com/" class="mdi fonts-icons mdi-dribbble"></a>
-                                <a target="_blank" href="https://medium.com/" class="mdi fonts-icons mdi-medium"></a>
-                                <a target="_blank" href="https://github.com/" class="mdi fonts-icons mdi-github-circle"></a>
+                                <a target="_blank" href="https://twitter.com/o_cornel" class="mdi fonts-icons mdi-twitter"></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/martincornel" class="mdi fonts-icons mdi-linkedin"></a>
+                                <a target="_blank" href="https://medium.com/mcornel" class="mdi fonts-icons mdi-medium"></a>
+                                <a target="_blank" href="https://github.com/ocornel" class="mdi fonts-icons mdi-github-circle"></a>
                             </span>
                         </p>
                     </div>
@@ -969,7 +965,7 @@
         var d = new Date();
         /*
         * The getHours() method returns the hour (from 0 to 23) of the specified date and time.
-        * Early mornig = 0 - 6
+        * Early morning = 0 - 6
         * Morning = 6 - 12
         * Evening = 12 - 18
         * Night = 18 - 23
@@ -984,4 +980,5 @@
     }
 
     window.onload = setThemePreference;
+    setInterval(setThemePreference, 15*3600000) // check which theme to set every 15 minutes;
 </script>
