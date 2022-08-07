@@ -21,15 +21,15 @@ Profile:	http://themeforest.net/user/andreysokoltsov
 @import url("main.css");
 
 body[data-theme='dark'] {
-    background-color: #111111;
+    background-color: #222222;
     color: white;
 }
 body[data-theme='dark'] > header,body[data-theme='dark'] > footer {
-    background-color: black;
+    background-color: #111111;
     color: white;
 }
 body[data-theme='dark'] > .modal>.modal-dialog>.modal-content>.modal-body {
-    background-color: #111111;
+    background-color: #222222;
     color: white;
     border: solid white;
 }
