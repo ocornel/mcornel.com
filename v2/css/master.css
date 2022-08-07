@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Danny - HTML Template
+Version:	1.1
+Author:	    Andrey Sokoltsov
+Profile:	http://themeforest.net/user/andreysokoltsov
+-------------------------------------------------------------------*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700i');
+@import url("font-awesome.min.css");
+
+/* PLUGIN CSS */
+
+
+/* MAIN CSS */
+@import url("animate.css");
+@import url("bootstrap.min.css");
+@import url("main.css");
+
+body[data-theme='dark'] {
+    background-color: #111111;
+    color: white;
+}
+body[data-theme='dark'] > header,body[data-theme='dark'] > footer {
+    background-color: black;
+    color: white;
+}
+body[data-theme='dark'] > .modal>.modal-dialog>.modal-content>.modal-body {
+    background-color: #111111;
+    color: white;
+    border: solid white;
+}
