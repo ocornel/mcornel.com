@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenya Elections 2022 | Live</title>
+    <link rel="stylesheet" type="text/css" href="../v2/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
+    <style>
+
+        body[data-theme='dark'] > section > div> div> footer {
+            background-color: #111111;
+            color: white;
+        }
+
+        @media screen and (min-width: 991px) {
+            iframe {
+                height: 600px;
+            }
+        }
+
+
+        @media screen and (max-width: 991px) {
+            iframe {
+                height: 740px;
+            }
+        }
+    </style>
+    
+<!--<script src="../v2/chrome-extension://odkdoekijebogaiopbjgkgogkgifjfnk/dist/detector.js"></script>-->
+</head>
+<body data-theme="light">
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-8 slideInLeft">
+                <div class="logo">
+                    <span class="point">Martin</span>
+                </div>
+            </div>
+            <div class="col-md-9 hidden-sm hidden-xs slideInRight">
+                <div class="main-menu">
+                    <ul class="list-inline">
+                        <li><a href="https://mcornel.com">Home</a></li>
+                        <li><a href="https://twitter.com/o_cornel">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/martincornel">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-4 hidden-lg hidden-md slideInRight">
+                <div class="mobile-btn">
+                    <span><i class="mdi mdi-menu" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mob-menu-wrapper hidden-md hidden-lg">
+    <div class="close-mob-menu">
+        <span><i class="mdi mdi-close" aria-hidden="true"></i></span>
+    </div>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="https://mcornel.com">Home</a></li>
+            <li><a href="https://twitter.com/o_cornel">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/martincornel">LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Mobile menu -->
+
+<section id="hello" class="section">
+    <div class="container">
+        <div style="position: absolute;overflow: hidden;left: 0px;top: 80px;border: solid 2px #555;width: 100vw;/* height: 70vh; */">
+            <div style="overflow: hidden;margin-top: -100px;margin-left: -25px;margin-left: -24px;">
+            </div>
+            <iframe src="https://elections.nation.africa/2022/" scrolling="no" style="border: 0px none;width: inherit;margin-top: 28px;margin-left: 0px;">
+            </iframe>
+            <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow zoomIn">
+                        <div class="copyright">
+                            <p>Live as they stream in. (Not official)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+    </div>
+</section>
+
+
+
+<script src="../v2/js/jquery-2.2.3.min.js"></script>
+<script src="../v2/js/bootstrap.min.js"></script>
+
+<script src="../v2/js/jquery.placeholder.min.js"></script>
+
+<!--Mix It Up-->
+<script src="../v2/assets/mixitup.min.js"></script>
+
+<!--THEME-->
+<script src="../v2/js/wow.min.js"></script>
+
+<script src="../v2/js/theme.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script>
+    function setThemePreference() {
+        var d = new Date();
+        /*
+        * The getHours() method returns the hour (from 0 to 23) of the specified date and time.
+        * Early morning = 0 - 6
+        * Morning = 6 - 12
+        * Evening = 12 - 18
+        * Night = 18 - 23
+        */
+        var currentHour = d.getHours();
+
+        if(currentHour >= 19 || currentHour <= 6) {
+            document.body.setAttribute("data-theme", "dark")
+        }else {
+            document.body.setAttribute("data-theme", "light")
+        }
+    }
+
+    window.onload = setThemePreference;
+    setInterval(setThemePreference, 15*3600000) // check which theme to set every 15 minutes;
+</script>
