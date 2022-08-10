@@ -27,20 +27,26 @@
             color: white;
         }
 
-        @media screen and (min-width: 991px) {
-            iframe {
-                height: 600px;
-            }
+        .election-div {
+            position: absolute;overflow: hidden;left: 0;top: 80px;border: solid 2px #555;width: 100vw; /* height: 70vh; */
         }
 
+        @media screen and (min-width: 991px) {
+            iframe {
+                height: 615px;
+            }
+        }
 
         @media screen and (max-width: 991px) {
             iframe {
-                height: 740px;
+                height: 935px;
+            }
+            .election-div {
+                top: 55px;
             }
         }
     </style>
-    
+
 <!--<script src="../v2/chrome-extension://odkdoekijebogaiopbjgkgogkgifjfnk/dist/detector.js"></script>-->
 </head>
 <body data-theme="light">
@@ -90,7 +96,7 @@
 
 <section id="hello" class="section">
     <div class="container">
-        <div style="position: absolute;overflow: hidden;left: 0px;top: 80px;border: solid 2px #555;width: 100vw;/* height: 70vh; */">
+        <div  class="election-div" >
             <div style="overflow: hidden;margin-top: -100px;margin-left: -25px;margin-left: -24px;">
             </div>
             <iframe src="https://elections.nation.africa/2022/" scrolling="no" style="border: 0px none;width: inherit;margin-top: 28px;margin-left: 0px;">
