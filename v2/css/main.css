@@ -3,7 +3,7 @@ body {
 }
 
 .site-btn {
-    background: #55aea1;
+    background: #009ce6;
 }
 
 .site-btn.gray-btn {
@@ -28,41 +28,41 @@ body {
 }
 
 .site-btn:active, .site-btn.active {
-    background: #55aea1;
+    background: #009ce6;
     -webkit-box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2);
     box-shadow: 10px 10px 20px rgba(51, 51, 255, 0.2);
 }
 
 .point:after {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .main-menu ul li a:hover {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .colored-link:hover, .colored-link:active, .colored-link.hover, .colored-link.active {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .mixitup-control-active {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 a.fonts-icons:hover, a.fonts-icons.hover {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 a.fonts-icons:active, a.fonts-icons.active {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .portfolio-box:hover .portfolio-name, .portfolio-box.hover .portfolio-name, .portfolio-box:active .portfolio-name, .portfolio-box.active .portfolio-name {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .form-wrapper .custom-select-box .custom-select-button:after {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .form-wrapper input[type=text]:hover + .form-validation, .form-wrapper input[type=text]:focus + .form-validation, .form-wrapper input[type=text]:active + .form-validation, .form-wrapper input[type=text].hover + .form-validation, .form-wrapper input[type=text].active + .form-validation,
@@ -79,15 +79,15 @@ a.fonts-icons:active, a.fonts-icons.active {
 }
 
 .mobile-btn {
-    color: #55aea1;
+    color: #009ce6;
 }
 
 .mob-menu-wrapper {
-    background: #55aea1;
+    background: #009ce6;
 }
 
 .wave-bg .zigzag svg:last-child polyline {
-    stroke: #55aea1;
+    stroke: #009ce6;
 }
 
 /*------------------------------------------------------------------
@@ -576,7 +576,7 @@ img {
     right: 0;
     bottom: 0;
     border-radius: 2px;
-    border: 2px solid #55aea1;
+    border: 2px solid #009ce6;
     pointer-events: none;
     opacity: 0;
     -webkit-transition: all 0.3s;

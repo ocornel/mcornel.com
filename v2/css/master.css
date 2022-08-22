@@ -147,3 +147,9 @@ body[data-theme='dark'] > table {
 }
 
 /* OTHER CUSTOM STYLES */
+.section {
+    border-top: solid 1px #009ce6;
+}
+.header {
+    border-bottom: 1px solid #009ce6;
+}
