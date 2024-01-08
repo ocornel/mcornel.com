@@ -1,6 +1,6 @@
 .idea
 wordpress
-s/.DB_Store
-v2/.DB_Store
-tools/js/.DB_Store
+s/.DS_Store
+v2/.DS_Store
+tools/js/.DS_Store
 
