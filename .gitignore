@@ -1,2 +1,6 @@
 .idea
 wordpress
+s/.DB_Store
+v2/.DB_Store
+tools/js/.DB_Store
+
