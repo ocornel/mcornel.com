@@ -20,76 +20,41 @@ window.onload = setThemePreference;
 setInterval(setThemePreference, 15 * 3600000) // check which theme to set every 15 minutes;
 
 function getAge(dateStart, dateEnd = null) {
-    if (dateEnd == null) {
-        var now = new Date();
-    } else now = new Date(dateEnd);
-
-    var yearNow = now.getYear();
-    var monthNow = now.getMonth();
-    var dateNow = now.getDate();
-    var dob = new Date(dateStart);
-    var yearDob = dob.getYear();
-    var monthDob = dob.getMonth();
-    var dateDob = dob.getDate();
-    var age = {};
-    var ageString = "";
-    var yearString = "";
-    var monthString = "";
-    var dayString = "";
-
-    yearAge = yearNow - yearDob;
-
-    if (monthNow >= monthDob)
-        var monthAge = monthNow - monthDob;
-    else {
-        yearAge--;
-        var monthAge = 12 + monthNow - monthDob;
+    // Validate date inputs using built-in methods (optional)
+    if (!isValidDate(dateStart) || (dateEnd && !isValidDate(dateEnd))) {
+        return "Invalid date(s) provided. Please enter valid dates.";
     }
 
-    if (dateNow >= dateDob)
-        var dateAge = dateNow - dateDob;
-    else {
-        monthAge--;
-        var dateAge = 31 + dateNow - dateDob;
+    // Use Date.prototype.getTime() for date comparison
+    const start = new Date(dateStart).getTime();
+    const end = dateEnd ? new Date(dateEnd).getTime() : new Date().getTime();
 
-        if (monthAge < 0) {
-            monthAge = 11;
-            yearAge--;
-        }
+    // Ensure end date is after start date
+    if (end < start) {
+        return "End date cannot be earlier than start date.";
     }
 
-    if (dateAge > 0) {
-        monthAge +=1;
-        dateAge = 0
-    }
+    // Calculate age components efficiently
+    const yearAge = Math.floor((end - start) / (1000 * 60 * 60 * 24 * 365));
+    const monthAge = Math.floor((end - start) % (1000 * 60 * 60 * 24 * 365) / (1000 * 60 * 60 * 24 * 30));
+    const dayAge = Math.floor((end - start) % (1000 * 60 * 60 * 24 * 30) / (1000 * 60 * 60 * 24));
 
-    age = {
-        years: yearAge,
-        months: monthAge,
-        days: dateAge
-    };
+    // Modify dayString to exclude days when (yearAge > 0 && monthAge <= 3)
+    const dayString = yearAge === 0 && monthAge <= 3 ? ` ${dayAge} day${dayAge === 1 ? '' : 's'}` : '';
 
-    if (age.years > 1) yearString = " years";
-    else yearString = " year";
-    if (age.months > 1) monthString = " months";
-    else monthString = " month";
-    if (age.days > 1) dayString = " days";
-    else dayString = " day";
+    // Combine age components with logical operators
+    const ageString =
+        `${yearAge}${yearAge === 1 ? " year" : " years"}${monthAge ? ` ${monthAge}${monthAge === 1 ? " month" : " months"}` : ''}${dayString}`;
 
-    if ((age.years > 0) && (age.months > 0) && (age.days > 0))
-        ageString = age.years + yearString + ", " + age.months + monthString + ", and " + age.days + dayString;
-    else if ((age.years == 0) && (age.months == 0) && (age.days > 0))
-        ageString = "Only " + age.days + dayString;
-    else if ((age.years > 0) && (age.months == 0) && (age.days == 0))
-        ageString = age.years + yearString;
-    else if ((age.years > 0) && (age.months > 0) && (age.days == 0))
-        ageString = age.years + yearString + " and " + age.months + monthString;
-    else if ((age.years == 0) && (age.months > 0) && (age.days > 0))
-        ageString = age.months + monthString + " and " + age.days + dayString;
-    else if ((age.years > 0) && (age.months == 0) && (age.days > 0))
-        ageString = age.years + yearString + " and " + age.days + dayString;
-    else if ((age.years == 0) && (age.months > 0) && (age.days == 0))
-        ageString = age.months + monthString;
-    else ageString = "Oops! Could not calculate age!";
     return ageString;
+}
+
+// Optional function to validate date format (example)
+function isValidDate(dateString) {
+    try {
+        new Date(dateString);
+        return true;
+    } catch (error) {
+        return false;
+    }
 }
