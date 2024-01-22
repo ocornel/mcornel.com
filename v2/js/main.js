@@ -1,23 +1,12 @@
 function setThemePreference() {
-    var d = new Date();
-    /*
-    * The getHours() method returns the hour (from 0 to 23) of the specified date and time.
-    * Early morning = 0 - 6
-    * Morning = 6 - 12
-    * Evening = 12 - 18
-    * Night = 18 - 23
-    */
-    var currentHour = d.getHours();
-
-    if (currentHour >= 19 || currentHour <= 6) {
-        document.body.setAttribute("data-theme", "dark")
-    } else {
-        document.body.setAttribute("data-theme", "light")
-    }
+    const currentHour = new Date().getHours();
+    const theme = currentHour >= 19 || currentHour <= 6 ? "dark" : "light";
+    document.body.setAttribute("data-theme", theme);
 }
 
+// Set theme on page load and every 15 minutes
 window.onload = setThemePreference;
-setInterval(setThemePreference, 15 * 3600000) // check which theme to set every 15 minutes;
+setInterval(setThemePreference, 15 * 60 * 1000);
 
 function getAge(dateStart, dateEnd = null) {
     // Validate date inputs using built-in methods (optional)
