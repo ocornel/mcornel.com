@@ -47,3 +47,47 @@ function isValidDate(dateString) {
         return false;
     }
 }
+
+
+// slideshow
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Show and animate the current slide
+  slides[slideIndex-1].style.opacity = 1; // Reset opacity to 1 for smooth transition
+  slides[slideIndex-1].style.display = "block";
+}
+
+// Add autoslide functionality
+let slideInterval = setInterval(autoSlide, 5000); // Change 5000 to desired interval + delay (in milliseconds)
+
+function autoSlide() {
+  plusSlides(1);
+}
+
+// Stop autoslide on hover (optional)
+var slideContainer = document.getElementsByClassName("slideshow-container")[0];
+slideContainer.addEventListener("mouseover", function() {
+  clearInterval(slideInterval);
+});
+
+slideContainer.addEventListener("mouseout", function() {
+  slideInterval = setInterval(autoSlide, 5000); // Change 5000 to desired interval + delay (in milliseconds)
+});
